@@ -58,7 +58,7 @@
     	<dependency>
     		<groupId>id.co.sigma.commonlib</groupId>
     		<artifactId>lib-base-server</artifactId>
-    		<version>${project.version}</version>
+    		<version>${bcommon.libs.version}</version>
     	</dependency>
     	<dependency>
 			<groupId>javax</groupId>

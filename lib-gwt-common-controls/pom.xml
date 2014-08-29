@@ -7,7 +7,7 @@
     <modelVersion>4.0.0</modelVersion>
 
 
-    <artifactId>lib-common-control</artifactId>
+    <artifactId>lib-gwt-common-controls</artifactId>
 
     <packaging>jar</packaging>
     <name>Common control</name>
@@ -41,20 +41,7 @@
                     <target>${maven.compiler.target}</target>
                 </configuration>
             </plugin>
-            <!--
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>gwt-maven-plugin</artifactId>
-				<version>${gwt.maven.plugin.version}</version>
-				<executions>
-					<execution>
-						<goals>
-							<goal>resources</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			 -->
+            
         </plugins>
     </build>
 
@@ -74,13 +61,9 @@
       <dependency>
     	<artifactId>lib-common-shared</artifactId>
     	<groupId>id.co.sigma.commonlib</groupId>
-    	<version>${project.version}</version>
+    	<version>${bcommon.libs.version}</version>
     </dependency>
-    <dependency>
-    	<groupId>id.co.sigma.commonlib</groupId>
-    	<artifactId>lib-jquery-integration</artifactId>
-    	<version>${project.version}</version>
-    </dependency>
+    
 
      <dependency>
       <groupId>com.google.gwt</groupId>

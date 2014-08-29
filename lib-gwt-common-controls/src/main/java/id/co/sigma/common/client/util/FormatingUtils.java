@@ -218,8 +218,12 @@ public class FormatingUtils {
 			frontSide = this.formatter.format(angkaDepan);
 			frontSide = frontSide.replace(",", ".");
 			
-			if (arr.length > 1 && arr[1]!= null)
+			if (arr.length > 1 && arr[1]!= null){
+				String blk = arr[1]; 
+				if ( blk!= null )
 				frontSide += "," + arr[1];
+			}
+				
 			
 			return frontSide;
 		}
