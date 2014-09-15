@@ -1,6 +1,6 @@
 package id.co.sigma.common.client.widget.dialog;
 
-import id.co.sigma.jquery.client.form.JQDatePicker;
+import id.co.sigma.common.client.jqueryui.form.JQDatePicker;
 
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;

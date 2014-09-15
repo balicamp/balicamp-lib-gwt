@@ -1,9 +1,9 @@
 package id.co.sigma.common.client.security;
 
 import id.co.sigma.common.client.app.ApplicationMenu;
-import id.co.sigma.jquery.client.menu.JQBranchMenuWidget;
-import id.co.sigma.jquery.client.menu.JQLeafMenuWidget;
-import id.co.sigma.jquery.client.menu.MenuClickHandler;
+import id.co.sigma.common.client.jqueryui.menu.JQBranchMenuWidget;
+import id.co.sigma.common.client.jqueryui.menu.JQLeafMenuWidget;
+import id.co.sigma.common.client.jqueryui.menu.MenuClickHandler;
 
 
 

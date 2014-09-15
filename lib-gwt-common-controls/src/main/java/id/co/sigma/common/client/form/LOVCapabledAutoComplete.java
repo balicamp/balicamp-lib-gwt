@@ -14,6 +14,7 @@ import id.co.sigma.common.client.control.ControlCommonValueType;
 import id.co.sigma.common.client.control.IFormElementConfiguration;
 import id.co.sigma.common.client.control.OnScreenConfigurableControl;
 import id.co.sigma.common.client.form.advance.AdvanceControlUtil;
+import id.co.sigma.common.client.jqueryui.form.JQBaseAutoComplete;
 import id.co.sigma.common.client.lov.LOVCapabledControl;
 import id.co.sigma.common.client.lov.LovPoolPanel;
 import id.co.sigma.common.client.style.CommonResourceBundle;
@@ -25,7 +26,6 @@ import id.co.sigma.common.data.lov.CommonLOV;
 import id.co.sigma.common.data.lov.CommonLOVHeader;
 import id.co.sigma.common.data.lov.LOVSource;
 import id.co.sigma.common.data.lov.StrongTypedCustomLOVID;
-import id.co.sigma.jquery.client.form.JQBaseAutoComplete;
 
 
 /**
@@ -214,7 +214,7 @@ public class LOVCapabledAutoComplete extends JQBaseAutoComplete<String> implemen
 		 
 		
 		
-		this.@id.co.sigma.jquery.client.form.JQBaseAutoComplete::autocompleteArg.source.push ({
+		this.@id.co.sigma.common.client.jqueryui.form.JQBaseAutoComplete::autocompleteArg.source.push ({
 			value: dataValue,
 			label: dataLabel
 		});
@@ -227,15 +227,15 @@ public class LOVCapabledAutoComplete extends JQBaseAutoComplete<String> implemen
 	 **/
 	private native void deployAutoCompleteHandler () /*-{
 		
-		var elementId =  this.@id.co.sigma.jquery.client.form.JQBaseAutoComplete::getElement()().id ;
-		var keyData = @id.co.sigma.jquery.client.form.JQBaseAutoComplete::ACTUAL_VALUE_KEY;
-		this.@id.co.sigma.jquery.client.form.JQBaseAutoComplete::autocompleteArg["select"]=function (event, ui) {
+		var elementId =  this.@id.co.sigma.common.client.jqueryui.form.JQBaseAutoComplete::getElement()().id ;
+		var keyData = @id.co.sigma.common.client.jqueryui.form.JQBaseAutoComplete::ACTUAL_VALUE_KEY;
+		this.@id.co.sigma.common.client.jqueryui.form.JQBaseAutoComplete::autocompleteArg["select"]=function (event, ui) {
 			$wnd.$("#" + elementId ).val( ui.item.label );
 			$wnd.$("#" + elementId )[0][keyData]=ui.item.value; 
 			return false ; 
 		};
 		
-		this.@id.co.sigma.jquery.client.form.JQBaseAutoComplete::autocompleteArg["focus"]=function (event, ui) {
+		this.@id.co.sigma.common.client.jqueryui.form.JQBaseAutoComplete::autocompleteArg["focus"]=function (event, ui) {
 			$wnd.$("#" + elementId ).val( ui.item.label );
 			return false ; 
 		};
@@ -257,7 +257,7 @@ public class LOVCapabledAutoComplete extends JQBaseAutoComplete<String> implemen
 	 * membaca underlying value(string)
 	 **/
 	protected native String getStringValue()/*-{
-		return $wnd.$( "#" +  this.@id.co.sigma.jquery.client.form.JQBaseAutoComplete::elementId )[0][@id.co.sigma.jquery.client.form.JQBaseAutoComplete::ACTUAL_VALUE_KEY] ;
+		return $wnd.$( "#" +  this.@id.co.sigma.common.client.jqueryui.form.JQBaseAutoComplete::elementId )[0][@id.co.sigma.common.client.jqueryui.form.JQBaseAutoComplete::ACTUAL_VALUE_KEY] ;
 	}-*/;
 	
 	@Override

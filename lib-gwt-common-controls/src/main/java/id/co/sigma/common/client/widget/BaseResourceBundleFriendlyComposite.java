@@ -8,6 +8,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 
+
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JsArrayString;
 import com.google.gwt.dom.client.Element;
@@ -16,12 +17,12 @@ import com.google.gwt.user.client.DOM;
 import id.co.sigma.common.client.CommonClientControlConstant;
 import id.co.sigma.common.client.control.IFormElementConfiguration;
 import id.co.sigma.common.client.control.OnScreenConfigurableControl;
+import id.co.sigma.common.client.control.ResourceBundleConfigurableControl;
 import id.co.sigma.common.client.form.MandatoryValidationEnabledControl;
 import id.co.sigma.common.client.form.MandatoryValidationFailureException;
 import id.co.sigma.common.client.form.ResourceBundleEnableContainer;
 import id.co.sigma.common.client.util.JSONUtilities;
 import id.co.sigma.common.client.util.OnScreenConfigurationUtils;
-import id.co.sigma.common.control.ResourceBundleConfigurableControl;
 
 
 

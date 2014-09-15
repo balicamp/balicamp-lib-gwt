@@ -1,17 +1,17 @@
 package id.co.sigma.common.client.security.branch;
 
 import id.co.sigma.common.security.dto.BranchDTO;
+import id.co.sigma.common.client.control.DataProcessWorker;
 import id.co.sigma.common.client.form.ExtendedButton;
 import id.co.sigma.common.client.form.ExtendedComboBox;
 import id.co.sigma.common.client.form.ExtendedTextBox;
 import id.co.sigma.common.client.security.BaseRootSecurityPanel;
 import id.co.sigma.common.client.security.rpc.BranchRPCServiceAsync;
-import id.co.sigma.common.control.DataProcessWorker;
 import id.co.sigma.common.data.PagedResultHolder;
 import id.co.sigma.common.data.query.SimpleQueryFilter;
 import id.co.sigma.common.data.query.SimpleQueryFilterOperator;
-import id.co.sigma.jquery.client.container.JQDialog;
-import id.co.sigma.jquery.client.grid.IReloadGridCommand;
+import id.co.sigma.common.client.jqueryui.container.JQDialog;
+import id.co.sigma.common.client.jqueryui.grid.IReloadGridCommand;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;

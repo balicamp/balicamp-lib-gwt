@@ -10,9 +10,9 @@ import com.google.gwt.user.client.ui.FlowPanel;
 import id.co.sigma.common.client.control.Base1ComboSearchFilterPanel;
 import id.co.sigma.common.client.control.SimpleSearchFilterHandler;
 import id.co.sigma.common.client.form.ExtendedButton;
+import id.co.sigma.common.client.util.I18Utilities;
 import id.co.sigma.common.data.query.SimpleQueryFilter;
 import id.co.sigma.common.data.query.SimpleSortArgument;
-import id.co.sigma.common.util.I18Utilities;
 
 /**
  *

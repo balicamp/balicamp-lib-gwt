@@ -4,7 +4,7 @@
  */
 package id.co.sigma.common.client.app;
 
-import id.co.sigma.common.form.DisposeablePanel;
+import id.co.sigma.common.client.form.DisposeablePanel;
 
 /**
  * interface object yang bisa di taruh di root

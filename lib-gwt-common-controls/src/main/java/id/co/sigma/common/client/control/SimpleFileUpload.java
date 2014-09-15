@@ -1,8 +1,8 @@
 package id.co.sigma.common.client.control;
 
 import id.co.sigma.common.client.util.CommonClientControlUtil;
+import id.co.sigma.common.client.util.JQueryUtils;
 import id.co.sigma.common.data.CommonLibraryConstant;
-import id.co.sigma.jquery.client.util.JQueryUtils;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.json.client.JSONObject;

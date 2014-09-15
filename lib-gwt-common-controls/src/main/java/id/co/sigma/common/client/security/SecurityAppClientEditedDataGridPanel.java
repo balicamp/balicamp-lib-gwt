@@ -1,7 +1,7 @@
 package id.co.sigma.common.client.security;
 
 import id.co.sigma.common.client.control.BaseClientEditedDataGridPanel;
-import id.co.sigma.common.util.I18Utilities;
+import id.co.sigma.common.client.util.I18Utilities;
 
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.rpc.AsyncCallback;

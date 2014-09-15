@@ -10,8 +10,8 @@ import id.co.sigma.common.data.app.LabelDataWrapper;
 import id.co.sigma.common.data.entity.I18NTextGroup;
 import id.co.sigma.common.data.entity.I18Text;
 import id.co.sigma.common.data.entity.I18TextPK;
-import id.co.sigma.jquery.client.container.JQDialog;
-import id.co.sigma.jquery.client.grid.event.GridSelectRowHandler;
+import id.co.sigma.common.client.jqueryui.container.JQDialog;
+import id.co.sigma.common.client.jqueryui.grid.event.GridSelectRowHandler;
 
 import java.util.List;
 

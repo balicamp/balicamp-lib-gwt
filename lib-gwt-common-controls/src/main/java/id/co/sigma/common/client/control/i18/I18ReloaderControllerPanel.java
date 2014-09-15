@@ -19,9 +19,9 @@ import com.google.gwt.user.client.ui.ListBox;
 import id.co.sigma.common.client.form.ExtendedButton;
 import id.co.sigma.common.client.rpc.ApplicationConfigRPCServiceAsync;
 import id.co.sigma.common.client.util.CommonClientControlUtil;
+import id.co.sigma.common.client.util.I18Utilities;
 import id.co.sigma.common.data.CommonLibraryConstant;
 import id.co.sigma.common.data.entity.I18Code;
-import id.co.sigma.common.util.I18Utilities;
 
 import com.google.gwt.uibinder.client.UiHandler;
 import com.google.gwt.event.dom.client.ClickEvent;

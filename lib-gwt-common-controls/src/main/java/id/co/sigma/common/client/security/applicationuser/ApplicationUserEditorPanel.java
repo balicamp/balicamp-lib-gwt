@@ -5,7 +5,9 @@ import id.co.sigma.common.security.domain.ApplicationUserKey;
 import id.co.sigma.common.security.domain.ApplicationMenu;
 import id.co.sigma.common.security.dto.UserDTO;
 import id.co.sigma.common.security.dto.UserGroupAssignmentDTO;
+import id.co.sigma.common.client.control.SingleValueLookupResultHandler;
 import id.co.sigma.common.client.form.advance.TextBoxWithLabel;
+import id.co.sigma.common.client.jqueryui.container.JQTabContainerPanel;
 import id.co.sigma.common.client.security.BaseAriumSecurityComposite;
 import id.co.sigma.common.client.security.control.MenuTree;
 import id.co.sigma.common.client.security.group.IAdd;
@@ -14,9 +16,10 @@ import id.co.sigma.common.client.security.lookup.BrowseLookupUser;
 import id.co.sigma.common.client.security.rpc.ApplicationUserRPCServiceAsync;
 import id.co.sigma.common.client.security.rpc.FunctionRPCServiceAsync;
 import id.co.sigma.common.client.security.rpc.GroupAssignmentRPCServiceAsync;
-import id.co.sigma.common.control.SingleValueLookupResultHandler;
-import id.co.sigma.common.util.I18Utilities;
-import id.co.sigma.jquery.client.container.JQTabContainerPanel;
+import id.co.sigma.common.client.util.I18Utilities;
+
+
+
 
 
 import java.util.ArrayList;

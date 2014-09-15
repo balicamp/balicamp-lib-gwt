@@ -3,7 +3,6 @@ package id.co.sigma.common.client.control;
 import com.google.gwt.user.client.ui.Widget;
 
 import id.co.sigma.common.client.form.ResourceBundleEnableContainer;
-import id.co.sigma.common.control.ResourceBundleConfigurableControl;
 
 public class ResourceAwareControlSelfRegisterWorker extends ChildSelfRegisterWorker<ResourceBundleConfigurableControl, ResourceBundleEnableContainer>{
 

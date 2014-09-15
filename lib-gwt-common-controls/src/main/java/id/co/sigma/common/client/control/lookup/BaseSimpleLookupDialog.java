@@ -4,12 +4,12 @@ import id.co.sigma.common.client.control.Base1ComboSearchFilterPanel;
 import id.co.sigma.common.client.control.BaseSimpleSearchComboContentLocator;
 import id.co.sigma.common.client.control.worklist.PagedSimpleGridPanel;
 import id.co.sigma.common.client.form.ExtendedButton;
+import id.co.sigma.common.client.util.I18Utilities;
 import id.co.sigma.common.client.widget.PageChangeHandler;
 import id.co.sigma.common.data.PagedResultHolder;
 import id.co.sigma.common.data.query.SimpleQueryFilter;
-import id.co.sigma.common.util.I18Utilities;
-import id.co.sigma.jquery.client.container.JQDialog;
-import id.co.sigma.jquery.client.grid.cols.BaseColumnDefinition;
+import id.co.sigma.common.client.jqueryui.container.JQDialog;
+import id.co.sigma.common.client.jqueryui.grid.cols.BaseColumnDefinition;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;

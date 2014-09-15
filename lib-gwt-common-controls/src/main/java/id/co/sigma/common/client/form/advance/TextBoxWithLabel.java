@@ -4,7 +4,7 @@ import java.util.List;
 
 import id.co.sigma.common.client.CommonClientControlConstant;
 import id.co.sigma.common.client.form.ExtendedTextBox;
-import id.co.sigma.common.util.I18Utilities;
+import id.co.sigma.common.client.util.I18Utilities;
 
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.dom.client.Style.Display;

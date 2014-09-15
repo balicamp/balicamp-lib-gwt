@@ -1,0 +1,66 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:p1="urn:import:id.co.sigma.common.client.form.advance" xmlns:p2="urn:import:id.co.sigma.common.client.widget">
+	<ui:style>
+	
+	</ui:style>
+	<g:HTMLPanel>
+		<p2:SpanLabel ui:field="lblTitle" label="Pemeliharaan User"/>
+		
+		<div style="height:5px"></div>
+		
+			<table>
+				<tr valign="top">
+					<td width="150px"></td>
+					<td></td>
+					<td><p1:TextBoxWithLabel 
+							ui:field="txtUserName" 
+							domId="CORE_USER_ADMIN_USERNAME" 
+							defaultLabel="Username" 
+							i18Key="adminstration.user.list.username" 
+							maxLength="32" placeholder="username" 
+							visibleLength="32" 
+							name="username" 
+							mandatory="true" 
+							groupId="CORE_SYSTEM_ADMINISTRATION"/></td>
+				</tr>
+				<tr valign="top">
+					<td></td>
+					<td></td>
+					<td><p1:TextBoxWithLabel 
+							ui:field="txtRealName" 
+							defaultLabel="Nama Lengkap"
+							i18Key="adminstration.user.list.realName" 
+							maxLength="128" 
+							placeholder="Nama User" 
+							visibleLength="64" 
+							name="realName" 
+							mandatory="true" 
+							groupId="CORE_SYSTEM_ADMINISTRATION"/></td>
+				</tr>
+				<tr valign="top">
+					<td></td>
+					<td></td>
+					<td><p1:TextBoxWithLabel 
+							ui:field="txtEmail" 
+							defaultLabel="Email" 
+							i18Key="adminstration.user.list.email" 
+							maxLength="128" 
+							visibleLength="64" 
+							placeholder="sample@domain.co.id"
+							groupId="CORE_SYSTEM_ADMINISTRATION"/></td>
+				</tr>
+				<tr valign="top">
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			
+			</table>
+			
+			
+		
+	
+	</g:HTMLPanel>
+</ui:UiBinder> 

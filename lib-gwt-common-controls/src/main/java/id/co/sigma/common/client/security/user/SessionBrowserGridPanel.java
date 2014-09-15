@@ -5,16 +5,16 @@ import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.AbstractImagePrototype;
 
 import id.co.sigma.common.client.control.worklist.SimpleRPCDrivenPagedSimpleGridPanel;
+import id.co.sigma.common.client.jqueryui.grid.CellGenericHandler;
+import id.co.sigma.common.client.jqueryui.grid.CellHyperlinkHandler;
+import id.co.sigma.common.client.jqueryui.grid.cols.BaseColumnDefinition;
+import id.co.sigma.common.client.jqueryui.grid.cols.StringColumnDefinition;
 import id.co.sigma.common.client.security.rpc.ApplicationSessionManagementRPCServiceAsync;
 import id.co.sigma.common.client.style.CommonResourceBundle;
+import id.co.sigma.common.client.util.I18Utilities;
 import id.co.sigma.common.data.query.SimpleQueryFilter;
 import id.co.sigma.common.data.query.SimpleSortArgument;
 import id.co.sigma.common.security.ApplicationSessionRegistry;
-import id.co.sigma.common.util.I18Utilities;
-import id.co.sigma.jquery.client.grid.CellGenericHandler;
-import id.co.sigma.jquery.client.grid.CellHyperlinkHandler;
-import id.co.sigma.jquery.client.grid.cols.BaseColumnDefinition;
-import id.co.sigma.jquery.client.grid.cols.StringColumnDefinition;
 
 /**
  * 

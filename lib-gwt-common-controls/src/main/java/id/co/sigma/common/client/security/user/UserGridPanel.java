@@ -4,20 +4,27 @@
 package id.co.sigma.common.client.security.user;
 
 import id.co.sigma.common.security.domain.User;
+import id.co.sigma.common.client.control.DataProcessWorker;
 import id.co.sigma.common.client.control.worklist.I18ColumnDefinition;
 import id.co.sigma.common.client.control.worklist.I18EnabledSimpleGrid;
 import id.co.sigma.common.client.security.group.IOpenAndCloseable;
 import id.co.sigma.common.client.security.group.IRemove;
 import id.co.sigma.common.client.security.rpc.UserRPCServiceAsync;
-import id.co.sigma.common.control.DataProcessWorker;
+import id.co.sigma.common.client.util.I18Utilities;
 import id.co.sigma.common.data.PagedResultHolder;
-import id.co.sigma.common.util.I18Utilities;
-import id.co.sigma.jquery.client.container.JQDialog;
-import id.co.sigma.jquery.client.grid.CellButtonHandler;
-import id.co.sigma.jquery.client.grid.IReloadGridCommand;
-import id.co.sigma.jquery.client.grid.cols.BaseColumnDefinition;
-import id.co.sigma.jquery.client.grid.cols.DateColumnDefinition;
-import id.co.sigma.jquery.client.grid.cols.StringColumnDefinition;
+import id.co.sigma.common.client.jqueryui.container.JQDialog;
+import id.co.sigma.common.client.jqueryui.grid.CellButtonHandler;
+import id.co.sigma.common.client.jqueryui.grid.IReloadGridCommand;
+import id.co.sigma.common.client.jqueryui.grid.cols.BaseColumnDefinition;
+import id.co.sigma.common.client.jqueryui.grid.cols.DateColumnDefinition;
+import id.co.sigma.common.client.jqueryui.grid.cols.StringColumnDefinition;
+
+
+
+
+
+
+
 
 
 import java.util.Date;

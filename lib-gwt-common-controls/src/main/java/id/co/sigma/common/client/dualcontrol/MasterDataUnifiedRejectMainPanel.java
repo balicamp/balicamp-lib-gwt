@@ -1,10 +1,10 @@
 package id.co.sigma.common.client.dualcontrol;
 
+import id.co.sigma.common.client.control.DataProcessWorker;
 import id.co.sigma.common.client.control.MainPanelStackControl;
 import id.co.sigma.common.client.control.ViewScreenMode;
 import id.co.sigma.common.client.form.ExtendedButton;
 import id.co.sigma.common.client.widget.BaseCommonControlComposite;
-import id.co.sigma.common.control.DataProcessWorker;
 import id.co.sigma.common.data.app.CommonDualControlContainerTable;
 import id.co.sigma.common.data.app.DualControlApprovalStatusCode;
 import id.co.sigma.common.data.query.SimpleQueryFilter;

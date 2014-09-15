@@ -1,10 +1,10 @@
 package id.co.sigma.common.client.form;
 
 import id.co.sigma.common.client.CommonClientControlConstant;
-import id.co.sigma.common.control.ResourceBundleConfigurableControl;
-import id.co.sigma.common.util.I18Utilities;
-import id.co.sigma.common.util.NativeJsUtilities;
-import id.co.sigma.jquery.client.util.JQueryUtils;
+import id.co.sigma.common.client.control.ResourceBundleConfigurableControl;
+import id.co.sigma.common.client.util.I18Utilities;
+import id.co.sigma.common.client.util.JQueryUtils;
+import id.co.sigma.common.client.util.NativeJsUtilities;
 
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.event.dom.client.ClickHandler;

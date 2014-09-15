@@ -7,10 +7,12 @@ import id.co.sigma.common.client.form.ExtendedComboBox;
 import id.co.sigma.common.client.form.ExtendedTextBox;
 import id.co.sigma.common.client.security.BaseRootSecurityPanel;
 import id.co.sigma.common.client.security.rpc.GroupRPCServiceAsync;
+import id.co.sigma.common.client.util.I18Utilities;
 import id.co.sigma.common.data.PagedResultHolder;
-import id.co.sigma.common.util.I18Utilities;
-import id.co.sigma.jquery.client.container.JQDialog;
-import id.co.sigma.jquery.client.grid.IReloadGridCommand;
+import id.co.sigma.common.client.jqueryui.container.JQDialog;
+import id.co.sigma.common.client.jqueryui.grid.IReloadGridCommand;
+
+
 
 
 

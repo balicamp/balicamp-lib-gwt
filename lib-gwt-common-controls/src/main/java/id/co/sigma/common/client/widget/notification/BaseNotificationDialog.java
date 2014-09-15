@@ -1,7 +1,7 @@
 package id.co.sigma.common.client.widget.notification;
 
-import id.co.sigma.common.util.I18Utilities;
-import id.co.sigma.jquery.client.container.JQDialog;
+import id.co.sigma.common.client.util.I18Utilities;
+import id.co.sigma.common.client.jqueryui.container.JQDialog;
 
 import com.google.gwt.user.client.Command;
 import com.google.gwt.user.client.ui.Widget;

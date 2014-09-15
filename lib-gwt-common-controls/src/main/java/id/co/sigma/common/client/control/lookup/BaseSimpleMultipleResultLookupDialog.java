@@ -2,9 +2,9 @@ package id.co.sigma.common.client.control.lookup;
 
 import java.util.List;
 
-import id.co.sigma.common.control.MultipleValueLookupResultHandler;
+import id.co.sigma.common.client.control.MultipleValueLookupResultHandler;
 import id.co.sigma.common.data.PagedResultHolder;
-import id.co.sigma.jquery.client.container.JQDialog;
+import id.co.sigma.common.client.jqueryui.container.JQDialog;
 
 
 

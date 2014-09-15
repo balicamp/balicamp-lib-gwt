@@ -5,7 +5,6 @@ import id.co.sigma.common.client.rpc.CommonControlAsyncCallback;
 import id.co.sigma.common.client.security.function.ApplicationMenuEditorPanel;
 import id.co.sigma.common.client.security.group.GroupListPanel;
 import id.co.sigma.common.client.security.rpc.ApplicationRPCServiceAsync;
-import id.co.sigma.common.client.security.user.UserListPanel;
 
 import com.google.gwt.user.client.Window;
 
@@ -72,6 +71,7 @@ public   class PanelGeneratorSecurity extends MenuHandlerPanelGeneratorGroup {
 					}
 				},
 				
+				/*
 				new IMenuHandlerPanelGenerator<UserListPanel>(){
 					@Override
 					public String getMenuCode() {
@@ -91,7 +91,7 @@ public   class PanelGeneratorSecurity extends MenuHandlerPanelGeneratorGroup {
 						
 						return "Panel User List - Daftar user + menu editor user";
 					}
-				},
+				},*/
 				
 				new IMenuHandlerPanelGenerator<ApplicationMenuEditorPanel>(){
 					@Override

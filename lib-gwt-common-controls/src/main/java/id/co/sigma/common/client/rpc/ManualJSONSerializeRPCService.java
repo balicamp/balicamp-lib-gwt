@@ -4,6 +4,7 @@ package id.co.sigma.common.client.rpc;
 
 import id.co.sigma.common.client.util.ClientParsedJSONContainer;
 import id.co.sigma.common.client.util.CommonClientControlUtil;
+import id.co.sigma.common.client.util.JQueryUtils;
 import id.co.sigma.common.data.CommonLibraryConstant;
 import id.co.sigma.common.data.serializer.IJSONWrapperObject;
 import id.co.sigma.common.data.serializer.json.ListDataWrapperJSONFriendlyType;
@@ -17,7 +18,6 @@ import id.co.sigma.common.exception.SimpleJSONSerializableException;
 import id.co.sigma.common.rpc.JSONSerializedRemoteService;
 import id.co.sigma.common.util.json.IJSONFriendlyObject;
 import id.co.sigma.common.util.json.JSONCharacterEscapeUtil;
-import id.co.sigma.jquery.client.util.JQueryUtils;
 
 import java.util.List;
 

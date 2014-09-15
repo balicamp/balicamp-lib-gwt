@@ -8,11 +8,13 @@ import id.co.sigma.common.client.security.BaseRootSecurityPanel;
 import id.co.sigma.common.client.security.group.IOpenAndCloseable;
 import id.co.sigma.common.client.security.group.IRemove;
 import id.co.sigma.common.client.security.rpc.PasswordPolicyRPCServiceAsync;
+import id.co.sigma.common.client.util.I18Utilities;
 import id.co.sigma.common.client.widget.PageChangeHandler;
 import id.co.sigma.common.data.PagedResultHolder;
-import id.co.sigma.common.util.I18Utilities;
-import id.co.sigma.jquery.client.container.JQDialog;
-import id.co.sigma.jquery.client.grid.IReloadGridCommand;
+import id.co.sigma.common.client.jqueryui.container.JQDialog;
+import id.co.sigma.common.client.jqueryui.grid.IReloadGridCommand;
+
+
 
 
 

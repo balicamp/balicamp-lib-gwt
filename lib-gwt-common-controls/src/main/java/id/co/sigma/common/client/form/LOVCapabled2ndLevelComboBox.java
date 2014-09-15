@@ -11,11 +11,11 @@ import id.co.sigma.common.client.control.ILOVCapableControl2ndLevel;
 import id.co.sigma.common.client.control.IParentLOVEnableControl;
 import id.co.sigma.common.client.lov.ClientSideLOVManager;
 import id.co.sigma.common.client.rpc.CommonControlAsyncCallback;
+import id.co.sigma.common.client.util.I18Utilities;
 import id.co.sigma.common.data.CustomDataFormatter;
 import id.co.sigma.common.data.lov.Common2ndLevelLOV;
 import id.co.sigma.common.data.lov.Common2ndLevelLOVHeader;
 import id.co.sigma.common.data.lov.StrongTyped2ndLevelLOVID;
-import id.co.sigma.common.util.I18Utilities;
 
 /**
  * Combo box yang bisa buat LOV 2nd level

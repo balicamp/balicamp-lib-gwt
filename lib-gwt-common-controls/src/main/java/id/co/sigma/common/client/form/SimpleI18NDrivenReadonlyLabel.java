@@ -1,6 +1,6 @@
 package id.co.sigma.common.client.form;
 
-import id.co.sigma.common.util.I18Utilities;
+import id.co.sigma.common.client.util.I18Utilities;
 
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.user.client.DOM;

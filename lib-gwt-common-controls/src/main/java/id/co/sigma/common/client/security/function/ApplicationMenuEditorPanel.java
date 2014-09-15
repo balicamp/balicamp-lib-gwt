@@ -5,7 +5,7 @@ import id.co.sigma.common.client.form.ExtendedButton;
 import id.co.sigma.common.client.rpc.CommonControlAsyncCallback;
 import id.co.sigma.common.client.security.rpc.FunctionRPCServiceAsync;
 import id.co.sigma.common.client.widget.BaseCommonControlComposite;
-import id.co.sigma.jquery.client.container.JQDialog;
+import id.co.sigma.common.client.jqueryui.container.JQDialog;
 
 
 import java.util.ArrayList;

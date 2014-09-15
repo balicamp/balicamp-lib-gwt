@@ -7,9 +7,9 @@ import com.google.gwt.dom.client.Style.Display;
 import com.google.gwt.user.client.DOM;
 
 import id.co.sigma.common.client.CommonClientControlConstant;
+import id.co.sigma.common.client.form.BaseFormElement;
 import id.co.sigma.common.client.form.CurrencyTextBox;
-import id.co.sigma.common.form.BaseFormElement;
-import id.co.sigma.common.util.I18Utilities;
+import id.co.sigma.common.client.util.I18Utilities;
 
 /**
  * Komponent yg menampilkan Label, titik dua dan currency textbox. Komponen ini harus di-wrapper dalam tag table<br>

@@ -1,9 +1,9 @@
 package id.co.sigma.common.client.security.menu;
 
+import id.co.sigma.common.client.jqueryui.menu.MenuClickHandler;
 import id.co.sigma.common.client.security.rpc.ApplicationUserRPCServiceAsync;
 import id.co.sigma.common.security.domain.Signon;
 import id.co.sigma.common.security.menu.ApplicationMenuSecurity;
-import id.co.sigma.jquery.client.menu.MenuClickHandler;
 
 import java.math.BigInteger;
 import java.util.ArrayList;

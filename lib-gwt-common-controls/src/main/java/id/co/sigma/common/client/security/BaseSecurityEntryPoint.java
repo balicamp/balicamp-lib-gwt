@@ -44,9 +44,9 @@ public abstract class BaseSecurityEntryPoint extends BaseRootSecurityPanel imple
 				RootPanelManager.getInstance().setHomePanelSuperAdmin(new HomePanel());
 								
 				
-				RootPanel.get(getMenuBarContainerIdSuperAdmin()).add(new MenuSuperAdmin());
-				RootPanel.get(getMenuBarContainerIdAdminWithBack()).add(new MenuAdminWithBack());
-				RootPanel.get(getMenuBarContainerIdAdminWithoutBack()).add(new MenuAdminWithoutBack());
+				
+				
+				
 				
 				RootPanel.get(getTitleContainerId()).getElement().setInnerHTML(getTitlePanel());		
 				RootPanel.get(getMainApplicationLayoutContainerId()).add(RootPanelManager.getInstance().getHomePanelSuperAdmin());

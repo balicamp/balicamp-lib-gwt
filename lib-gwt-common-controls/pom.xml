@@ -64,6 +64,11 @@
     	<version>${bcommon.libs.version}</version>
     </dependency>
     
+    <dependency>
+    	<artifactId>lib-gwt-shared</artifactId>
+    	<groupId>id.co.sigma.commonlib.gwt</groupId>
+    	<version>${bcommon.libs.version}</version>
+    </dependency>
 
      <dependency>
       <groupId>com.google.gwt</groupId>

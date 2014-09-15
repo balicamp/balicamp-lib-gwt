@@ -14,8 +14,8 @@ import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.Widget;
 
 import id.co.sigma.common.client.style.CommonResourceBundle;
-import id.co.sigma.common.util.I18Utilities;
-import id.co.sigma.common.util.NativeJsUtilities;
+import id.co.sigma.common.client.util.I18Utilities;
+import id.co.sigma.common.client.util.NativeJsUtilities;
 
 import java.util.ArrayList;
 

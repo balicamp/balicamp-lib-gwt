@@ -7,14 +7,14 @@ import id.co.sigma.common.client.control.MainPanelStackControl;
 import id.co.sigma.common.client.control.SimpleFileUpload;
 import id.co.sigma.common.client.form.ExtendedButton;
 import id.co.sigma.common.client.form.advance.TextBoxAreaWithLabel;
+import id.co.sigma.common.client.jqueryui.grid.IReloadGridCommand;
 import id.co.sigma.common.client.rpc.DualControlDataRPCServiceAsync;
 import id.co.sigma.common.client.util.CommonClientControlUtil;
+import id.co.sigma.common.client.util.JQueryUtils;
 import id.co.sigma.common.client.widget.BaseCommonControlComposite;
 import id.co.sigma.common.data.app.DualControlEnabledData;
 import id.co.sigma.common.data.app.HeaderDataOnlyCommonDualControlContainerTable;
 import id.co.sigma.common.exception.BadBulkUploadDataException;
-import id.co.sigma.jquery.client.grid.IReloadGridCommand;
-import id.co.sigma.jquery.client.util.JQueryUtils;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;

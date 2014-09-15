@@ -2,12 +2,14 @@ package id.co.sigma.common.client.security.lookup;
 
 import id.co.sigma.common.security.dto.BranchDTO;
 import id.co.sigma.common.client.control.BaseSimpleSearchComboContentLocator;
+import id.co.sigma.common.client.jqueryui.grid.cols.BaseColumnDefinition;
+import id.co.sigma.common.client.jqueryui.grid.cols.StringColumnDefinition;
 import id.co.sigma.common.client.security.lookup.base.SecurityBaseSimpleSingleResultLookupDialog;
 import id.co.sigma.common.client.security.rpc.BranchRPCServiceAsync;
 import id.co.sigma.common.data.PagedResultHolder;
 import id.co.sigma.common.data.query.SimpleQueryFilter;
-import id.co.sigma.jquery.client.grid.cols.BaseColumnDefinition;
-import id.co.sigma.jquery.client.grid.cols.StringColumnDefinition;
+
+
 
 
 

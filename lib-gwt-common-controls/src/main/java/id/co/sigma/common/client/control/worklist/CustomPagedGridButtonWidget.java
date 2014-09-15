@@ -6,9 +6,9 @@ import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.Timer;
 import com.google.gwt.user.client.ui.RootPanel;
 
+import id.co.sigma.common.client.jqueryui.grid.GridButtonWidget;
 import id.co.sigma.common.client.widget.PageChangeHandler;
 import id.co.sigma.common.data.PagedResultHolder;
-import id.co.sigma.jquery.client.grid.GridButtonWidget;
 
 
 
@@ -86,7 +86,7 @@ public class CustomPagedGridButtonWidget extends GridButtonWidget{
 			DOM.getElementById(this.gridButtonElement.getId() + "_center").setInnerHTML("");
 			gridPagingControl = new GridPagingControl();
 			RootPanel.get(/*this.gridButtonElement.getId() + "_center"*/).add(gridPagingControl);
-			DOM.appendChild(DOM.getElementById(this.gridButtonElement.getId() + "_center"), gridPagingControl.getElement());
+			DOM.appendChild((Element) DOM.getElementById(this.gridButtonElement.getId() + "_center"), gridPagingControl.getElement());
 			GWT.log("Ok selesai membuat paging control");
 			new Timer() {
 				@Override

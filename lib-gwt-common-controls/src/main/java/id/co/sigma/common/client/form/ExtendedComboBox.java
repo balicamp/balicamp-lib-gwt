@@ -20,7 +20,7 @@ import com.google.gwt.user.client.Timer;
 import com.google.gwt.user.client.ui.HasValue;
 
 import id.co.sigma.common.client.control.IParentLOVEnableControl;
-import id.co.sigma.jquery.client.util.JQueryUtils;
+import id.co.sigma.common.client.util.JQueryUtils;
 
 
 

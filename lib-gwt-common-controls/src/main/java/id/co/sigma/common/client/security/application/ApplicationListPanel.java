@@ -1,16 +1,16 @@
 package id.co.sigma.common.client.security.application;
 
 import id.co.sigma.common.security.dto.ApplicationDTO;
+import id.co.sigma.common.client.control.DataProcessWorker;
 import id.co.sigma.common.client.security.BaseAriumSecurityComposite;
 import id.co.sigma.common.client.security.BaseRootSecurityPanel;
 import id.co.sigma.common.client.security.common.IOpenCloseDialog;
 import id.co.sigma.common.client.security.control.RootPanelManager;
 import id.co.sigma.common.client.security.rpc.ApplicationRPCServiceAsync;
-import id.co.sigma.common.control.DataProcessWorker;
+import id.co.sigma.common.client.util.I18Utilities;
 import id.co.sigma.common.data.PagedResultHolder;
-import id.co.sigma.common.util.I18Utilities;
-import id.co.sigma.jquery.client.container.JQDialog;
-import id.co.sigma.jquery.client.grid.IReloadGridCommand;
+import id.co.sigma.common.client.jqueryui.container.JQDialog;
+import id.co.sigma.common.client.jqueryui.grid.IReloadGridCommand;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.uibinder.client.UiBinder;

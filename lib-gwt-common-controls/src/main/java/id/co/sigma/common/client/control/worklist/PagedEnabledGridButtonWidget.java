@@ -8,10 +8,10 @@ import com.google.gwt.user.client.Command;
 import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.Window;
 
+import id.co.sigma.common.client.jqueryui.grid.GridButtonWidget;
+import id.co.sigma.common.client.util.JQueryUtils;
 import id.co.sigma.common.client.widget.PageChangeHandler;
 import id.co.sigma.common.data.PagedResultHolder;
-import id.co.sigma.jquery.client.grid.GridButtonWidget;
-import id.co.sigma.jquery.client.util.JQueryUtils;
 
 
 /**

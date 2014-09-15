@@ -5,9 +5,9 @@ import id.co.sigma.common.security.dto.UserDetailDTO;
 import id.co.sigma.common.security.menu.ApplicationMenuSecurity;
 import id.co.sigma.common.client.BaseCommonControlEntryPoint;
 import id.co.sigma.common.client.common.CommonRunAsynCallback;
+import id.co.sigma.common.client.jqueryui.menu.MenuClickHandler;
 import id.co.sigma.common.client.rpc.CommonControlAsyncCallback;
 import id.co.sigma.common.client.security.rpc.ApplicationUserRPCServiceAsync;
-import id.co.sigma.jquery.client.menu.MenuClickHandler;
 
 import java.math.BigInteger;
 import java.util.HashMap;

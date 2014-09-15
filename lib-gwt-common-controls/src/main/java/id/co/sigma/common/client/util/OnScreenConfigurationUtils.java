@@ -15,7 +15,6 @@ import id.co.sigma.common.client.widget.dialog.DialogConfigurationDate;
 import id.co.sigma.common.client.widget.dialog.DialogConfigurationNumber;
 import id.co.sigma.common.client.widget.dialog.DialogConfigurationString;
 import id.co.sigma.common.data.entity.FormElementConfiguration;
-import id.co.sigma.common.util.I18Utilities;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.dom.client.Element;

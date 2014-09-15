@@ -1,12 +1,11 @@
 package id.co.sigma.common.client.control.worklist;
 
+import com.google.gwt.dom.client.Element;
 import com.google.gwt.user.client.Command;
-import com.google.gwt.user.client.Element;
 
+import id.co.sigma.common.client.jqueryui.grid.GridButtonWidget;
 import id.co.sigma.common.client.widget.PageChangeHandler;
 import id.co.sigma.common.data.PagedResultHolder;
-import id.co.sigma.jquery.client.grid.GridButtonWidget;
-import id.co.sigma.jquery.client.grid.SimpleGridPanel;
 
 
 

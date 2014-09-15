@@ -1,6 +1,6 @@
 package id.co.sigma.common.client.form.advance;
 
-import id.co.sigma.common.util.I18Utilities;
+import id.co.sigma.common.client.util.I18Utilities;
 
 import java.util.ArrayList;
 import java.util.List;

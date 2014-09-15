@@ -8,14 +8,14 @@ import com.google.gwt.user.client.rpc.AsyncCallback;
 
 import id.co.sigma.common.client.CommonClientControlConstant;
 import id.co.sigma.common.client.control.SimpleSearchFilterHandler;
+import id.co.sigma.common.client.jqueryui.grid.ISortOrderChangeHandler;
+import id.co.sigma.common.client.jqueryui.grid.cols.BaseColumnDefinition;
 import id.co.sigma.common.client.rpc.GeneralPurposeRPCAsync;
 import id.co.sigma.common.client.widget.PageChangeHandler;
 import id.co.sigma.common.data.PagedResultHolder;
 import id.co.sigma.common.data.query.SimpleQueryFilter;
 import id.co.sigma.common.data.query.SimpleSortArgument;
 import id.co.sigma.common.util.json.IJSONFriendlyObject;
-import id.co.sigma.jquery.client.grid.ISortOrderChangeHandler;
-import id.co.sigma.jquery.client.grid.cols.BaseColumnDefinition;
 
 /**
  * grid yang ke bind dengan simple select.Grid request select dengan simple select. cukup dengan array of SigmaSimpleQueryFilter. yang perlu anda lakukan hanya : 

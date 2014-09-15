@@ -10,8 +10,8 @@ import id.co.sigma.common.client.control.OnScreenConfigurableControl;
 import id.co.sigma.common.client.control.ResourceAwareControlSelfRegisterWorker;
 import id.co.sigma.common.client.form.advance.AdvanceControlUtil;
 import id.co.sigma.common.client.util.CommonClientControlUtil;
+import id.co.sigma.common.client.util.I18Utilities;
 import id.co.sigma.common.client.util.OnScreenConfigurationUtils;
-import id.co.sigma.common.util.I18Utilities;
 
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.dom.client.Style.Display;

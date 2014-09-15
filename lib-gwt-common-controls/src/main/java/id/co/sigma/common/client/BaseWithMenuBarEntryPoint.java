@@ -1,14 +1,14 @@
 package id.co.sigma.common.client;
 
 import id.co.sigma.common.client.app.ApplicationMenu;
+import id.co.sigma.common.client.jqueryui.menu.JQBaseMenuWidget;
+import id.co.sigma.common.client.jqueryui.menu.JQBranchMenuWidget;
+import id.co.sigma.common.client.jqueryui.menu.JQLeafMenuWidget;
+import id.co.sigma.common.client.jqueryui.menu.JQMenuBar;
+import id.co.sigma.common.client.jqueryui.menu.MenuClickHandler;
 import id.co.sigma.common.client.style.CommonResourceBundle;
 import id.co.sigma.common.client.util.ClientSecurityUtils;
 import id.co.sigma.common.data.app.security.ClientSecurityData;
-import id.co.sigma.jquery.client.menu.JQBaseMenuWidget;
-import id.co.sigma.jquery.client.menu.JQBranchMenuWidget;
-import id.co.sigma.jquery.client.menu.JQLeafMenuWidget;
-import id.co.sigma.jquery.client.menu.JQMenuBar;
-import id.co.sigma.jquery.client.menu.MenuClickHandler;
 
 import java.util.ArrayList;
 import java.util.HashMap;

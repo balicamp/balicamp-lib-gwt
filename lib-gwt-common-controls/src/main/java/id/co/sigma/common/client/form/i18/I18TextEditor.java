@@ -25,7 +25,7 @@ import id.co.sigma.common.data.CoreLibLookup;
 import id.co.sigma.common.data.entity.I18Code;
 import id.co.sigma.common.data.entity.I18Text;
 import id.co.sigma.common.data.entity.I18TextPK;
-import id.co.sigma.jquery.client.container.JQDialog;
+import id.co.sigma.common.client.jqueryui.container.JQDialog;
 
 /**
  * 

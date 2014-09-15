@@ -2,14 +2,16 @@ package id.co.sigma.common.client.security.branch;
 
 import id.co.sigma.common.security.domain.Branch;
 import id.co.sigma.common.security.dto.BranchDTO;
+import id.co.sigma.common.client.control.SingleValueLookupResultHandler;
 import id.co.sigma.common.client.form.ExtendedTextArea;
 import id.co.sigma.common.client.form.advance.CheckBoxWithLabel;
 import id.co.sigma.common.client.form.advance.TextBoxWithLabel;
+import id.co.sigma.common.client.jqueryui.grid.IReloadGridCommand;
 import id.co.sigma.common.client.security.BaseAriumSecurityComposite;
 import id.co.sigma.common.client.security.lookup.BrowseLookupBranch;
 import id.co.sigma.common.client.security.rpc.BranchRPCServiceAsync;
-import id.co.sigma.common.control.SingleValueLookupResultHandler;
-import id.co.sigma.jquery.client.grid.IReloadGridCommand;
+
+
 
 
 
@@ -160,7 +162,7 @@ public class BranchEditorPanel extends BaseAriumSecurityComposite {
 		if(txtStatus.getValue()){
 			status = "A";
 		}
-		branch.setStatus(status);		
+		branch.setDataStatusCode(status);		
 		return branch;
 	}
 

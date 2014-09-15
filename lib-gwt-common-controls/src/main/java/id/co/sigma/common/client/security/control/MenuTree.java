@@ -4,8 +4,9 @@
 package id.co.sigma.common.client.security.control;
 
 import id.co.sigma.common.client.security.BaseAriumSecurityComposite;
+import id.co.sigma.common.client.util.I18Utilities;
 import id.co.sigma.common.security.domain.ApplicationMenu;
-import id.co.sigma.common.util.I18Utilities;
+
 
 
 import java.util.HashMap;

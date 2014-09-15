@@ -7,12 +7,12 @@ import id.co.sigma.common.security.domain.PasswordPolicy;
 import id.co.sigma.common.client.form.advance.I18HardCodeLOVComboBoxWithLabel;
 import id.co.sigma.common.client.form.advance.IntegerTextBoxWithLabel;
 import id.co.sigma.common.client.form.advance.TextBoxAreaWithLabel;
+import id.co.sigma.common.client.jqueryui.grid.IReloadGridCommand;
 import id.co.sigma.common.client.security.BaseAriumSecurityComposite;
 import id.co.sigma.common.client.security.group.IOpenAndCloseable;
 import id.co.sigma.common.client.security.rpc.PasswordPolicyRPCServiceAsync;
 import id.co.sigma.common.client.util.I18HardcodedLOVParam;
-import id.co.sigma.common.util.I18Utilities;
-import id.co.sigma.jquery.client.grid.IReloadGridCommand;
+import id.co.sigma.common.client.util.I18Utilities;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.uibinder.client.UiBinder;

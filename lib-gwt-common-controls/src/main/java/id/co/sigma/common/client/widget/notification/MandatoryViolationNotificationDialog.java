@@ -6,7 +6,7 @@ import com.google.gwt.user.client.ui.HTML;
 
 import id.co.sigma.common.client.form.MandatoryValidationEnabledControl;
 import id.co.sigma.common.client.form.MandatoryValidationFailureException;
-import id.co.sigma.common.util.I18Utilities;
+import id.co.sigma.common.client.util.I18Utilities;
 
 
 /**

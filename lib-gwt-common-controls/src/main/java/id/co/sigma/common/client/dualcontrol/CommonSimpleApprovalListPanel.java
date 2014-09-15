@@ -3,13 +3,13 @@
  */
 package id.co.sigma.common.client.dualcontrol;
 
+import id.co.sigma.common.client.control.DataProcessWorker;
 import id.co.sigma.common.client.control.MainPanelStackControl;
 import id.co.sigma.common.client.control.ViewScreenMode;
 import id.co.sigma.common.client.form.ExtendedButton;
 import id.co.sigma.common.client.form.advance.LOVCapabledComboBoxWithLabel;
 import id.co.sigma.common.client.form.advance.TextBoxWithLabel;
 import id.co.sigma.common.client.widget.BaseCommonControlComposite;
-import id.co.sigma.common.control.DataProcessWorker;
 import id.co.sigma.common.data.CoreLibLookup;
 import id.co.sigma.common.data.approval.CommonApprovalHeader;
 import id.co.sigma.common.data.query.SimpleQueryFilter;

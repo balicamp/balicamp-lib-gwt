@@ -3,9 +3,9 @@
  */
 package id.co.sigma.common.client.control.worklist;
 
+import id.co.sigma.common.client.jqueryui.grid.event.GridSelectRowHandler;
 import id.co.sigma.common.data.ClientSideListDataEditorContainerSortable;
 import id.co.sigma.common.data.ISortableData;
-import id.co.sigma.jquery.client.grid.event.GridSelectRowHandler;
 
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.user.client.Command;

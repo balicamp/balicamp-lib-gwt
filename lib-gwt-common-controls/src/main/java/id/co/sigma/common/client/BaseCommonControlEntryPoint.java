@@ -2,6 +2,7 @@ package id.co.sigma.common.client;
 
 import java.util.ArrayList;
 
+import id.co.sigma.common.client.control.I18TextProvider;
 import id.co.sigma.common.client.control.i18.AppPanelResourceCacheManager;
 import id.co.sigma.common.client.control.i18.DefaultAppPanelResourceCacheManagerImpl;
 import id.co.sigma.common.client.control.i18.I18ReloaderControllerPanel;
@@ -9,16 +10,16 @@ import id.co.sigma.common.client.dualcontrol.DualControlUtil;
 import id.co.sigma.common.client.dualcontrol.IDualControlEditorManager;
 import id.co.sigma.common.client.dualcontrol.ISimpleApprovalPanelManager;
 import id.co.sigma.common.client.dualcontrol.SimpleApprovalUtil;
+import id.co.sigma.common.client.rpc.ManagedAsyncCallback;
 import id.co.sigma.common.client.security.MenuHandlerPanelGeneratorGroup;
 import id.co.sigma.common.client.security.rpc.UserRPCServiceAsync;
 import id.co.sigma.common.client.util.ClientSideDateTimeParser;
 import id.co.sigma.common.client.util.ClientSideSimpleDebugerWriterManager;
 import id.co.sigma.common.client.util.ClientSideWrappedJSONParser;
 import id.co.sigma.common.client.util.CommonClientControlUtil;
-import id.co.sigma.common.control.I18TextProvider;
-import id.co.sigma.common.rpc.ManagedAsyncCallback;
+import id.co.sigma.common.client.util.I18Utilities;
+import id.co.sigma.common.client.util.JQueryUtils;
 import id.co.sigma.common.security.dto.UserDetailDTO;
-import id.co.sigma.common.util.I18Utilities;
 import id.co.sigma.common.util.ObjectGeneratorManager;
 import id.co.sigma.common.util.json.SharedServerClientLogicManager;
 
@@ -32,7 +33,6 @@ import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.RootPanel;
 
 import id.co.sigma.common.client.widget.BaseCommonControlComposite;
-import id.co.sigma.jquery.client.util.JQueryUtils;
 
 
 
@@ -162,7 +162,7 @@ public abstract class BaseCommonControlEntryPoint implements EntryPoint{
 		GWT.runAsync(new RunAsyncCallback() {
 			@Override
 			public void onSuccess() {
-				objectManager.registerGenerator(new id.co.sigma.common.data.serializer.LibCommonObjectGenerator());
+				objectManager.registerGenerator(new id.co.sigma.common.client.LibCommonObjectGenerator());
 				objectManager.registerGenerator(new id.co.sigma.common.data.serializer.LibSharedObjectGenerator());
 				objectManager.registerGenerator(new id.co.sigma.common.security.SecuritySharedObjectGenerator());
 				objectManager.registerGenerator(new id.co.sigma.common.security.domain.SecurityDataObjectGenerator());

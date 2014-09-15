@@ -1,7 +1,7 @@
 package id.co.sigma.common.client.security.menu;
 
+import id.co.sigma.common.client.jqueryui.menu.MenuClickHandler;
 import id.co.sigma.common.security.menu.ApplicationMenuSecurity;
-import id.co.sigma.jquery.client.menu.MenuClickHandler;
 
 /**
  * Link Menu

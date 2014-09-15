@@ -4,7 +4,6 @@ import id.co.sigma.common.client.CommonClientControlConstant;
 import id.co.sigma.common.client.control.IFormElementConfiguration;
 import id.co.sigma.common.client.control.OnScreenConfigurableControl;
 import id.co.sigma.common.client.util.OnScreenConfigurationUtils;
-import id.co.sigma.common.form.BaseFormElement;
 
 import com.google.gwt.user.client.DOM;
 import com.google.gwt.user.client.ui.SimpleCheckBox;

@@ -8,7 +8,6 @@ import id.co.sigma.common.client.control.OnScreenConfigurableControl;
 import id.co.sigma.common.client.form.advance.AdvanceControlUtil;
 import id.co.sigma.common.client.util.CommonClientControlUtil;
 import id.co.sigma.common.client.util.OnScreenConfigurationUtils;
-import id.co.sigma.common.form.BaseFormElement;
 
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.dom.client.Style.Display;

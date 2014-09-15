@@ -3,8 +3,8 @@ package id.co.sigma.common.client.control.worklist;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.user.client.ui.Widget;
 
+import id.co.sigma.common.client.control.ResourceBundleConfigurableControl;
 import id.co.sigma.common.client.form.ResourceBundleEnableContainer;
-import id.co.sigma.common.control.ResourceBundleConfigurableControl;
 
 
 /**

@@ -8,7 +8,7 @@ import com.google.gwt.user.client.DOM;
 
 import id.co.sigma.common.client.CommonClientControlConstant;
 import id.co.sigma.common.client.form.LOVCapabledAutoComplete;
-import id.co.sigma.common.util.I18Utilities;
+import id.co.sigma.common.client.util.I18Utilities;
 
 /**
  * Komponent yg menampilkan Label, titik dua dan LOV Autocomplete. Komponen ini harus di-wrapper dalam tag table<br>

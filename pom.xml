@@ -33,6 +33,7 @@
 		<bcommon.libs.version>1.6</bcommon.libs.version>
     </properties>
   <modules>
+  	<module>lib-gwt-shared</module>
   	<module>lib-gwt-common-controls</module>
 	<module>lib-gwt-server</module>
 	<module>sandbox-gwt</module>

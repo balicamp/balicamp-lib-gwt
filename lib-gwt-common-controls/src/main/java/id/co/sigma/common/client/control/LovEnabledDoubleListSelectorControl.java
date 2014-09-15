@@ -3,10 +3,10 @@ package id.co.sigma.common.client.control;
 import com.google.gwt.user.client.DOM;
 
 import id.co.sigma.common.client.lov.LOVCapabledControl;
+import id.co.sigma.common.client.util.JQueryUtils;
 import id.co.sigma.common.data.lov.CommonLOV;
 import id.co.sigma.common.data.lov.CommonLOVHeader;
 import id.co.sigma.common.data.lov.LOVSource;
-import id.co.sigma.jquery.client.util.JQueryUtils;
 
 /**
  * @author <a href="mailto:gede.sutarsa@gmail.com">Gede Sutarsa</a>

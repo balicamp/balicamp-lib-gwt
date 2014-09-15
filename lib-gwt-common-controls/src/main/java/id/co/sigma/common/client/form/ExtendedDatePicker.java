@@ -10,9 +10,9 @@ import id.co.sigma.common.client.control.IFormElementConfiguration;
 import id.co.sigma.common.client.control.ITransformableToReadonlyLabel;
 import id.co.sigma.common.client.control.OnScreenConfigurableControl;
 import id.co.sigma.common.client.form.advance.AdvanceControlUtil;
+import id.co.sigma.common.client.jqueryui.form.JQDatePicker;
 import id.co.sigma.common.client.util.CommonClientControlUtil;
 import id.co.sigma.common.client.util.OnScreenConfigurationUtils;
-import id.co.sigma.jquery.client.form.JQDatePicker;
 
 
 

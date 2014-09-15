@@ -8,9 +8,9 @@ import id.co.sigma.common.client.control.IFormElementConfiguration;
 import id.co.sigma.common.client.control.OnScreenConfigurableControl;
 import id.co.sigma.common.client.control.ResourceAwareControlSelfRegisterWorker;
 import id.co.sigma.common.client.control.i18.I18TextEditorPanel;
+import id.co.sigma.common.client.util.I18Utilities;
 import id.co.sigma.common.client.util.OnScreenConfigurationUtils;
-import id.co.sigma.common.util.I18Utilities;
-import id.co.sigma.jquery.client.container.JQDialog;
+import id.co.sigma.common.client.jqueryui.container.JQDialog;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.dom.client.Element;

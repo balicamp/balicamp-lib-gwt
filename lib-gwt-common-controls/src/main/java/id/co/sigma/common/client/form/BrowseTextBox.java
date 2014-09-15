@@ -1,8 +1,7 @@
 package id.co.sigma.common.client.form;
 
 import id.co.sigma.common.client.style.CommonResourceBundle;
-import id.co.sigma.common.form.BaseFormElement;
-import id.co.sigma.common.util.I18Utilities;
+import id.co.sigma.common.client.util.I18Utilities;
 
 import java.io.IOException;
 import java.text.ParseException;

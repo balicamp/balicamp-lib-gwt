@@ -1,14 +1,14 @@
 package id.co.sigma.common.client.dualcontrol;
 
 import id.co.sigma.common.client.common.ITitleAndSearchPanelFilter;
+import id.co.sigma.common.client.control.DataProcessWorker;
 import id.co.sigma.common.client.control.ExpensivePanelGenerator;
 import id.co.sigma.common.client.control.IPanelGenerator;
-import id.co.sigma.common.control.DataProcessWorker;
+import id.co.sigma.common.client.jqueryui.grid.CellButtonHandler;
+import id.co.sigma.common.client.jqueryui.grid.cols.BaseColumnDefinition;
+import id.co.sigma.common.client.jqueryui.grid.cols.GridColumnGroup;
 import id.co.sigma.common.data.PagedResultHolder;
 import id.co.sigma.common.data.app.DualControlEnabledData;
-import id.co.sigma.jquery.client.grid.CellButtonHandler;
-import id.co.sigma.jquery.client.grid.cols.BaseColumnDefinition;
-import id.co.sigma.jquery.client.grid.cols.GridColumnGroup;
 
 import java.io.Serializable;
 import java.math.BigInteger;
@@ -43,7 +43,7 @@ import com.google.gwt.user.client.ui.Widget;
  */
 public abstract class BaseDualControlEditorWithAllInOnePanel<KEY extends Serializable ,  DATA extends DualControlEnabledData<DATA, KEY>> 
 	extends 
-	BaseDualControlDataEditor<KEY, DATA> implements IDualControlMultipleDataEditor<DATA>{
+	BaseDualControlDataEditor<KEY, DATA> {
 	
 	
 	
@@ -67,34 +67,42 @@ public abstract class BaseDualControlEditorWithAllInOnePanel<KEY extends Seriali
 
 		@Override
 		protected String getEraseIconTitleI18nKey() {
-			return BaseDualControlEditorWithAllInOnePanel.this.getEraseIconTitleI18nKey();
+			String w = BaseDualControlEditorWithAllInOnePanel.this.getEraseIconTitleI18nKey();
+			if ( w != null && !w.isEmpty() )
+				return w  ; 
+			return super.getEraseIconTitleI18nKey(); 
 		}
 
 		@Override
 		protected String getEditIconTitleI18nKey() {
-			return BaseDualControlEditorWithAllInOnePanel.this.getEditIconTitleI18nKey();
+			String swap = BaseDualControlEditorWithAllInOnePanel.this.getEditIconTitleI18nKey() ; 
+			if ( swap!= null && !swap.isEmpty())
+				return swap ;
+			return super.getEditIconTitleI18nKey();
 		}
 
 		@Override
 		protected String getDefaultEditIconTitle() {
-			return BaseDualControlEditorWithAllInOnePanel.this.getDefaultEditIconTitle();
+			String swap =BaseDualControlEditorWithAllInOnePanel.this.getDefaultEditIconTitle();
+			if ( swap!= null && !swap.isEmpty())
+				return swap ;
+			return super.getDefaultEditIconTitle();
 		}
 		@Override
 		protected String getViewDetailIconTitleI18nKey() {
-			return BaseDualControlEditorWithAllInOnePanel.this.getViewDetailIconTitleI18nKey();
+			String swap = BaseDualControlEditorWithAllInOnePanel.this.getViewDetailIconTitleI18nKey();
+			if ( swap!= null && !swap.isEmpty())
+				return swap ;
+			return super.getViewDetailIconTitleI18nKey(); 
 		}
 		@Override
 		protected String getDefaultViewDetailIconTitle() {
-			return BaseDualControlEditorWithAllInOnePanel.this.getDefaultViewDetailIconTitle();
+			String swap = BaseDualControlEditorWithAllInOnePanel.this.getDefaultViewDetailIconTitle();
+			if ( swap!= null && !swap.isEmpty())
+				return swap ;
+			return super.getDefaultViewDetailIconTitle(); 
 		}
-		@Override
-		protected String getApproveDataIconTitleI18nKey() {
-			return BaseDualControlEditorWithAllInOnePanel.this.getApproveDataIconTitleI18nKey();
-		}
-		@Override
-		protected String getDefaultApproveDataIconTitle() {
-			return BaseDualControlEditorWithAllInOnePanel.this.getDefaultApproveDataIconTitle();
-		}
+		
 		@Override
 		protected String generateFailGetEditableDataListMessage(
 				Throwable caught) {
@@ -104,22 +112,35 @@ public abstract class BaseDualControlEditorWithAllInOnePanel<KEY extends Seriali
 		@Override
 		protected String generateFailSubmitRequestDeleteDataMessage(
 				Throwable caught) {
-			return BaseDualControlEditorWithAllInOnePanel.this.generateFailSubmitRequestDeleteDataMessage(caught);
+			String swap =  BaseDualControlEditorWithAllInOnePanel.this.generateFailSubmitRequestDeleteDataMessage(caught);
+			if ( swap != null &&! swap.isEmpty()){
+				return swap ; 
+			}
+			return super.generateFailSubmitRequestDeleteDataMessage(caught); 
 		}
 
 		@Override
 		protected String getDefaultDeleteRequestSubmitedDoneMessage() {
-			return BaseDualControlEditorWithAllInOnePanel.this.getDefaultDeleteRequestSubmitedDoneMessage();
+			String swap = BaseDualControlEditorWithAllInOnePanel.this.getDefaultDeleteRequestSubmitedDoneMessage();
+			if ( swap!= null && !swap.isEmpty())
+				return swap; 
+			return super.getDefaultDeleteRequestSubmitedDoneMessage(); 
 		}
 
 		@Override
 		protected String getRowNumberColumnHeaderLabelI18nKey() {
-			return BaseDualControlEditorWithAllInOnePanel.this.getRowNumberColumnHeaderLabelI18nKey();
+			String swap = BaseDualControlEditorWithAllInOnePanel.this.getRowNumberColumnHeaderLabelI18nKey();
+			if ( swap!= null && !swap.isEmpty())
+				return swap; 
+			return super.getRowNumberColumnHeaderLabelI18nKey();
 		}
 
 		@Override
 		protected String getActionColumnHeaderLabelI18nKey() {
-			return BaseDualControlEditorWithAllInOnePanel.this.getActionColumnHeaderLabelI18nKey();
+			String swap =  BaseDualControlEditorWithAllInOnePanel.this.getActionColumnHeaderLabelI18nKey();
+			if ( swap!= null && !swap.isEmpty())
+				return swap; 
+			return super.getActionColumnHeaderLabelI18nKey();
 		}
 
 		@Override
@@ -222,7 +243,11 @@ public abstract class BaseDualControlEditorWithAllInOnePanel<KEY extends Seriali
 
 		@Override
 		protected String getAddDataIconCaptionI18nCode() {
-			return BaseDualControlEditorWithAllInOnePanel.this.getAddDataIconCaptionI18nCode();
+			
+			String swap =  BaseDualControlEditorWithAllInOnePanel.this.getAddDataIconCaptionI18nCode();
+			if ( swap!= null && !swap.isEmpty())
+				return swap ; 
+			return super.getAddDataIconCaptionI18nCode(); 
 		}
 		
 		
@@ -327,111 +352,7 @@ public abstract class BaseDualControlEditorWithAllInOnePanel<KEY extends Seriali
 		GWT.log("[dualcontrol] instantiate grid untuk dual control all in one");
 		
 		
-		BaseDualControlDataGridPanel<DATA> retvalGrid = new InsideContainerDualControlGridPanel(editForApprovalRequestHandler,  viewDetailHandler);  /*new BaseDualControlDataGridPanel< DATA>(editForApprovalRequestHandler,  viewDetailHandler) {
-
-			@Override
-			public Class<DATA> getDualControlClass() {
-				return BaseDualControlEditorWithAllInOnePanel.this.getProccessedClass();
-			}
-
-			@Override
-			protected String getEraseIconTitleI18nKey() {
-				return BaseDualControlEditorWithAllInOnePanel.this.getEraseIconTitleI18nKey();
-			}
-
-			@Override
-			protected String getEditIconTitleI18nKey() {
-				return BaseDualControlEditorWithAllInOnePanel.this.getEditIconTitleI18nKey();
-			}
-
-			@Override
-			protected String getDefaultEditIconTitle() {
-				return BaseDualControlEditorWithAllInOnePanel.this.getDefaultEditIconTitle();
-			}
-			@Override
-			protected String getViewDetailIconTitleI18nKey() {
-				return BaseDualControlEditorWithAllInOnePanel.this.getViewDetailIconTitleI18nKey();
-			}
-			@Override
-			protected String getDefaultViewDetailIconTitle() {
-				return BaseDualControlEditorWithAllInOnePanel.this.getDefaultViewDetailIconTitle();
-			}
-			@Override
-			protected String getApproveDataIconTitleI18nKey() {
-				return BaseDualControlEditorWithAllInOnePanel.this.getApproveDataIconTitleI18nKey();
-			}
-			@Override
-			protected String getDefaultApproveDataIconTitle() {
-				return BaseDualControlEditorWithAllInOnePanel.this.getDefaultApproveDataIconTitle();
-			}
-			@Override
-			protected String generateFailGetEditableDataListMessage(
-					Throwable caught) {
-				return BaseDualControlEditorWithAllInOnePanel.this.generateFailGetEditableDataListMessage(caught);
-			}
-
-			@Override
-			protected String generateFailSubmitRequestDeleteDataMessage(
-					Throwable caught) {
-				return BaseDualControlEditorWithAllInOnePanel.this.generateFailSubmitRequestDeleteDataMessage(caught);
-			}
-
-			@Override
-			protected String getDefaultDeleteRequestSubmitedDoneMessage() {
-				return BaseDualControlEditorWithAllInOnePanel.this.getDefaultDeleteRequestSubmitedDoneMessage();
-			}
-
-			@Override
-			protected String getRowNumberColumnHeaderLabelI18nKey() {
-				return BaseDualControlEditorWithAllInOnePanel.this.getRowNumberColumnHeaderLabelI18nKey();
-			}
-
-			@Override
-			protected String getActionColumnHeaderLabelI18nKey() {
-				return BaseDualControlEditorWithAllInOnePanel.this.getActionColumnHeaderLabelI18nKey();
-			}
-
-			@Override
-			protected String generateConfirmDeleteDataMessage(
-					DATA dataToErase) {
-				return BaseDualControlEditorWithAllInOnePanel.this.generateConfirmDeleteDataMessage(dataToErase);
-			}
-
-			@Override
-			protected BaseColumnDefinition<DATA, ?>[] getColumnDefinitions() {
-				return BaseDualControlEditorWithAllInOnePanel.this.getColumnDefinitions();
-			}
-			
-			
-			@Override
-			public void setData(PagedResultHolder<DATA> data) {
-				super.setData(data);
-			}
-			
-			
-			
-			
-			@Override
-			protected GridColumnGroup[] getGroupedColumnHeader() {
-				return getGroupedGridColumnHeader();
-			}
-			
-			@Override
-			protected String getGridStatePersistenceHolderKey() {
-				return  getGridSaveStateKey ();
-			}
-			
-			@Override
-			protected CellButtonHandler<DATA>[] generateActionButtons() {
-				GWT.log("[dualcontrol] generate action buttons");
-				CellButtonHandler<DATA>[] org =super.generateActionButtons();
-				CellButtonHandler<DATA>[] leftBtns = generateFrontSideAdditionalActionButtons(); 
-				CellButtonHandler<DATA>[] rightBtns = generateAfterSideAdditionalActionButtons();
-				return arrangeActionButtons(org, leftBtns, rightBtns);
-				
-			}
-			
-		};*/
+		BaseDualControlDataGridPanel<DATA> retvalGrid = new InsideContainerDualControlGridPanel(editForApprovalRequestHandler,  viewDetailHandler); 
 		Integer tinggi = getGridHeight() ; 
 		if ( tinggi != null ){
 			retvalGrid.setHeight(tinggi);
@@ -498,6 +419,7 @@ public abstract class BaseDualControlEditorWithAllInOnePanel<KEY extends Seriali
 			}
 		}
 		
+		@SuppressWarnings("unchecked")
 		CellButtonHandler<DATA>[] retval =(CellButtonHandler<DATA>[]) new CellButtonHandler<?>[btns.size()];
 		btns.toArray(retval); 
 		return retval ; 
@@ -584,85 +506,91 @@ public abstract class BaseDualControlEditorWithAllInOnePanel<KEY extends Seriali
 	 * i18n key untuk title erase<br/>
 	 * Ini dipergunakan dalam grid
 	 **/
-	protected abstract
-		String getEraseIconTitleI18nKey () ; 
+	protected String getEraseIconTitleI18nKey () {
+		return "core.dualcontrol.list.eraseDataIconTitle"; 
+	}
 	
 	
 	/**
 	 * i18n key untuk title delete<br/>
 	 * Ini dipergunakan dalam grid
 	 **/
-	protected abstract
-		String getEditIconTitleI18nKey () ; 
+	protected String getEditIconTitleI18nKey () {
+		return "core.dualcontrol.list.editDataIconTitle"; 
+	}
 	
 	
 	/**
 	 * default label utnuk edit data<br/>
 	 * Ini dipergunakan dalam grid
 	 **/
-	protected abstract
-		String getDefaultEditIconTitle () ; 
+	protected String getDefaultEditIconTitle () {
+		return "Edit data"; 
+	}
 	
 	
 	/**
 	 * i18n Key untuk view detail<br/>
 	 * Ini dipergunakan dalam grid
 	 **/
-	protected abstract
-		String getViewDetailIconTitleI18nKey () ;
+	protected String getViewDetailIconTitleI18nKey () {
+		return "core.dualcontrol.list.viewDetailIconTitle"; 
+	}
 	
 	/**
 	 * label default utnuk view detail data<br/>
 	 * Ini dipergunakan dalam grid
 	 **/
-	protected abstract
-		String getDefaultViewDetailIconTitle () ;
-	/**
-	 * key internalization untuk approve data<br/>
-	 * Ini dipergunakan dalam grid
-	 **/
-	protected abstract
-		String getApproveDataIconTitleI18nKey () ;
+	protected 
+		String getDefaultViewDetailIconTitle () {
+		return "tampilkan detail data"; 
+	}
 	
-	/**
-	 * label default utnuk approve data<br/>
-	 * Ini dipergunakan dalam grid
-	 **/
-	protected abstract
-		String getDefaultApproveDataIconTitle () ;
+	
+	
 	
 	
 	/**
 	 * message kalau membaca da ta yang bisa di edit gagal di lakukan. menjadi tanggung jawab masing-masing. termasuk isu i18n<br/>
 	 * Ini dipergunakan dalam grid 
 	 **/
-	protected abstract String generateFailGetEditableDataListMessage (Throwable caught) ; 
+	protected  String generateFailGetEditableDataListMessage (Throwable caught) {
+		return "Gagal membaca data utuk proses update. error di laporkan : " + caught.getMessage(); 
+	}
 	
 	/**
 	 * message kalau gagal submit request delete data<br/>
 	 * Ini dipergunakan dalam grid
 	 **/
-	protected abstract String generateFailSubmitRequestDeleteDataMessage (Throwable caught) ;
+	protected  String generateFailSubmitRequestDeleteDataMessage (Throwable caught) {
+		return null ; 
+	}
 	
 	
 	/**
 	 * message kalau delete di submit<br/>
 	 * Ini dipergunakan dalam grid
 	 **/
-	protected abstract String getDefaultDeleteRequestSubmitedDoneMessage (); 
+	protected  String getDefaultDeleteRequestSubmitedDoneMessage (){
+		return "Permintaan hapus data selesai"; 
+	}
 	
 
 	/**
 	 * i18n code utnuk row number<br/>
 	 * Ini dipergunakan dalam grid
 	 **/
-	protected abstract  String  getRowNumberColumnHeaderLabelI18nKey () ; 
+	protected   String  getRowNumberColumnHeaderLabelI18nKey () {
+		return "core.dualcontrol.list.rowNumber";
+	}
 	
 	/**
 	 * i18n key utnuk action column label<br/>
 	 * Ini dipergunakan dalam grid
 	 **/
-	protected abstract String  getActionColumnHeaderLabelI18nKey () ; 
+	protected  String  getActionColumnHeaderLabelI18nKey () {
+		return "adminstration.user.list.actionColumnHeader"; 
+	}
 	
 
 	/**
@@ -696,14 +624,18 @@ public abstract class BaseDualControlEditorWithAllInOnePanel<KEY extends Seriali
 	/**
 	 * default label untuk icon add, ini ada di sisi bawah dari grid
 	 **/
-	protected abstract String getAddDataIconDefaultCaption () ; 
+	protected  String getAddDataIconDefaultCaption () {
+		return "tambah"; 
+	}; 
 	
 	
 	
 	/**
 	 * key internalization untuk 
 	 **/
-	protected abstract String getAddDataIconCaptionI18nCode () ;
+	protected  String getAddDataIconCaptionI18nCode () {
+		return "core.dualcontrol.list.msgApproveDone" ; 
+	}
 	
 	protected int getDefaultActionColumnWidth() {
 		return 100 ; 

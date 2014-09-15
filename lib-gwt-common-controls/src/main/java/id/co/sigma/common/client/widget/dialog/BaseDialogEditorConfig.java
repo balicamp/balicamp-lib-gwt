@@ -5,11 +5,11 @@ import id.co.sigma.common.client.form.SimpleSpanImageButton;
 import id.co.sigma.common.client.rpc.ApplicationConfigRPCServiceAsync;
 import id.co.sigma.common.data.entity.FormElementConfiguration;
 import id.co.sigma.common.data.entity.FormElementConfigurationPK;
-import id.co.sigma.jquery.client.container.JQDialog;
+import id.co.sigma.common.client.jqueryui.container.JQDialog;
 
+import com.google.gwt.dom.client.Element;
 import com.google.gwt.user.client.Command;
 import com.google.gwt.user.client.DOM;
-import com.google.gwt.user.client.Element;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.CheckBox;

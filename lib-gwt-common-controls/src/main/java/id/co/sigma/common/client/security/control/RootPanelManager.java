@@ -3,8 +3,6 @@ package id.co.sigma.common.client.security.control;
 import id.co.sigma.common.client.security.BaseRootSecurityPanel;
 import id.co.sigma.common.client.security.HomePanel;
 import id.co.sigma.common.client.security.HomePanelAdmin;
-import id.co.sigma.common.client.security.MenuAdminWithBack;
-import id.co.sigma.common.client.security.MenuSuperAdmin;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,8 +29,7 @@ public final class RootPanelManager {
 	private HomePanelAdmin homePanelAdmin;
 	private BaseRootSecurityPanel currentWidget ;
 	
-	private MenuSuperAdmin menuSuperAdmin;
-	private MenuAdminWithBack menuAdmin;
+	
 	
 	private List<ApplicationMenuLink> listOfApplicationLink = new ArrayList<ApplicationMenuLink>();
 	
@@ -99,27 +96,6 @@ public final class RootPanelManager {
 		RootPanel.get(contentPlaceMenuBarIdAdminWithoutBack).setVisible(true);
 	}
 	
-	/**
-	 * Get panel menu super admin
-	 * @return
-	 */
-	public MenuSuperAdmin getMenuSuperAdminPanel(){
-		if(menuSuperAdmin == null){
-			this.menuSuperAdmin = new MenuSuperAdmin();
-		}
-		return menuSuperAdmin;
-	}
-	
-	/**
-	 * Get panel menu admin byasa
-	 * @return
-	 */
-	public MenuAdminWithBack getMenuAdminPanel(){
-		if(menuAdmin == null){
-			this.menuAdmin = new MenuAdminWithBack();
-		}
-		return menuAdmin;
-	}
 	
 	/**
 	 * Get div id dari title bar

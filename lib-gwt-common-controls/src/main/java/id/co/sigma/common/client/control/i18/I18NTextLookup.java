@@ -2,15 +2,15 @@ package id.co.sigma.common.client.control.i18;
 
 import id.co.sigma.common.client.control.BaseSimpleSearchComboContentLocator;
 import id.co.sigma.common.client.control.lookup.BaseSimpleSingleResultLookupDialog;
+import id.co.sigma.common.client.jqueryui.grid.cols.BaseColumnDefinition;
+import id.co.sigma.common.client.jqueryui.grid.cols.StringColumnDefinition;
 import id.co.sigma.common.client.rpc.ApplicationConfigRPCServiceAsync;
+import id.co.sigma.common.client.util.I18Utilities;
 import id.co.sigma.common.data.PagedResultHolder;
 import id.co.sigma.common.data.entity.I18Text;
 import id.co.sigma.common.data.entity.I18TextPK;
 import id.co.sigma.common.data.query.SimpleQueryFilter;
 import id.co.sigma.common.data.query.SimpleQueryFilterOperator;
-import id.co.sigma.common.util.I18Utilities;
-import id.co.sigma.jquery.client.grid.cols.BaseColumnDefinition;
-import id.co.sigma.jquery.client.grid.cols.StringColumnDefinition;
 
 import com.google.gwt.user.client.rpc.AsyncCallback;
 

@@ -1,6 +1,6 @@
 package id.co.sigma.common.client.common;
 
-import id.co.sigma.jquery.client.util.JQueryUtils;
+import id.co.sigma.common.client.util.JQueryUtils;
 
 import com.google.gwt.json.client.JSONObject;
 import com.google.gwt.json.client.JSONParser;

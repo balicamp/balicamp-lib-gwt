@@ -1,8 +1,8 @@
 package id.co.sigma.common.client.security.control;
 
+import id.co.sigma.common.client.jqueryui.menu.MenuClickHandler;
 import id.co.sigma.common.client.security.menu.ILinkMenu;
 import id.co.sigma.common.security.menu.ApplicationMenuSecurity;
-import id.co.sigma.jquery.client.menu.MenuClickHandler;
 
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;

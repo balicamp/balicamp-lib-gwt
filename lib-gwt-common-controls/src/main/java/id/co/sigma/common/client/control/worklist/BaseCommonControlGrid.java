@@ -4,10 +4,10 @@ import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.JsArrayInteger;
 import com.google.gwt.storage.client.Storage;
 
+import id.co.sigma.common.client.jqueryui.grid.SimpleGridPanel;
+import id.co.sigma.common.client.jqueryui.grid.cols.BaseColumnDefinition;
 import id.co.sigma.common.util.json.ParsedJSONContainer;
 import id.co.sigma.common.util.json.SharedServerClientLogicManager;
-import id.co.sigma.jquery.client.grid.SimpleGridPanel;
-import id.co.sigma.jquery.client.grid.cols.BaseColumnDefinition;
 
 /**
  * base class JQgrid untuk common control

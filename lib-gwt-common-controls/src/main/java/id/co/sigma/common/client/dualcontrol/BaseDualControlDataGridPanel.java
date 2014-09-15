@@ -8,14 +8,20 @@ import com.google.gwt.core.client.GWT;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 
+import id.co.sigma.common.client.control.DataProcessWorker;
 import id.co.sigma.common.client.control.ICustomValidator;
 import id.co.sigma.common.client.control.SimpleSearchFilterHandler;
 import id.co.sigma.common.client.control.worklist.PagedSimpleGridPanel;
 import id.co.sigma.common.client.form.exception.CommonFormValidationException;
+import id.co.sigma.common.client.jqueryui.grid.CellButtonHandler;
+import id.co.sigma.common.client.jqueryui.grid.ISortOrderChangeHandler;
+import id.co.sigma.common.client.jqueryui.grid.cols.BaseColumnDefinition;
+import id.co.sigma.common.client.jqueryui.grid.cols.StringColumnDefinition;
 import id.co.sigma.common.client.rpc.DualControlDataRPCServiceAsync;
 import id.co.sigma.common.client.rpc.CommonControlAsyncCallback;
+import id.co.sigma.common.client.util.I18Utilities;
+import id.co.sigma.common.client.util.JQueryUtils;
 import id.co.sigma.common.client.widget.PageChangeHandler;
-import id.co.sigma.common.control.DataProcessWorker;
 import id.co.sigma.common.data.PagedResultHolder;
 import id.co.sigma.common.data.app.CommonDualControlContainerTable;
 import id.co.sigma.common.data.app.DualControlApprovalStatusCode;
@@ -23,12 +29,6 @@ import id.co.sigma.common.data.app.DualControlEnabledData;
 import id.co.sigma.common.data.app.DualControlEnabledOperation;
 import id.co.sigma.common.data.query.SimpleQueryFilter;
 import id.co.sigma.common.data.query.SimpleSortArgument;
-import id.co.sigma.common.util.I18Utilities;
-import id.co.sigma.jquery.client.grid.CellButtonHandler;
-import id.co.sigma.jquery.client.grid.ISortOrderChangeHandler;
-import id.co.sigma.jquery.client.grid.cols.BaseColumnDefinition;
-import id.co.sigma.jquery.client.grid.cols.StringColumnDefinition;
-import id.co.sigma.jquery.client.util.JQueryUtils;
 
 /**
  * base grid untuk dual control enable data
@@ -325,74 +325,109 @@ public abstract class BaseDualControlDataGridPanel<DATA extends DualControlEnabl
 	/**
 	 * i18n key untuk title erase
 	 **/
-	protected abstract
-		String getEraseIconTitleI18nKey () ; 
+	protected String getEraseIconTitleI18nKey () {
+		return "core.dualcontrol.list.eraseDataIconTitle";
+	}
 	
 	
 	/**
 	 * i18n key untuk title delete
 	 **/
-	protected abstract
-		String getEditIconTitleI18nKey () ; 
+	protected 
+		String getEditIconTitleI18nKey () {
+		return "core.dualcontrol.list.editDataIconTitle"; 
+	}
 	
 	
 	/**
 	 * default label utnuk edit data
 	 **/
-	protected abstract
-		String getDefaultEditIconTitle () ; 
+	protected 
+		String getDefaultEditIconTitle () {
+		return "Edit Data"; 
+	}
 	
 	
 	/**
 	 * i18n Key untuk view detail
 	 **/
-	protected abstract
-		String getViewDetailIconTitleI18nKey () ;
+	protected String getViewDetailIconTitleI18nKey () {
+		return "core.dualcontrol.list.viewDetailIconTitle"; 
+	}
 	
 	/**
 	 * label default utnuk view detail data
 	 **/
-	protected abstract
-		String getDefaultViewDetailIconTitle () ;
-	/**
-	 * key internalization untuk approve data
-	 **/
-	protected abstract
-		String getApproveDataIconTitleI18nKey () ;
+	protected 
+		String getDefaultViewDetailIconTitle () {
+		return "tampilkan detail data"; 
+	}
 	
-	/**
-	 * label default utnuk approve data
-	 **/
-	protected abstract
-		String getDefaultApproveDataIconTitle () ;
 	
+		
 	
 	/**
 	 * message kalau membaca da ta yang bisa di edit gagal di lakukan. menjadi tanggung jawab masing-masing. termasuk isu i18n 
 	 **/
-	protected abstract String generateFailGetEditableDataListMessage (Throwable caught) ; 
+	protected  String generateFailGetEditableDataListMessage (Throwable caught) {
+		String defMsg = "Gagal membaca data untuk di edit. eror di laporkan : " + caught.getMessage() ;
+		String key = generateFailGetEditableDataListMessageI18nKey();
+		if ( key== null ||key.isEmpty())
+			return defMsg ; 
+		return I18Utilities.getInstance().getInternalitionalizeText(key, defMsg, new Object[]{caught.getMessage()}); 
+	}
 	
+	
+	protected  String generateFailGetEditableDataListMessageI18nKey () {
+		return "core.dualcontrol.list.btnReject"; 
+		
+		
+	}
 	/**
 	 * message kalau gagal submit request delete data
 	 **/
-	protected abstract String generateFailSubmitRequestDeleteDataMessage (Throwable caught) ;
+	protected  String generateFailSubmitRequestDeleteDataMessage (Throwable caught) {
+		String msg ="Gagal mengirim permintaan hapus data, erorr di laporkan : " + caught.getMessage();
+		String keyI18 = getSubmitRequestDeleteFailed18Key(); 
+		String msRender = I18Utilities.getInstance().getInternalitionalizeText(keyI18, msg, new Object[]{caught.getMessage()});
+		return msRender; 
+	}
+	
+	
+	
+	/**
+	 * i18 key untuk kasus 
+	 */
+	protected String getSubmitRequestDeleteFailed18Key () {
+		return "core.dualcontrol.editor.msgEraseRequestFailed"; 
+	}
+	
 	
 	
 	/**
 	 * message kalau delete di submit
 	 **/
-	protected abstract String getDefaultDeleteRequestSubmitedDoneMessage (); 
+	protected  String getDefaultDeleteRequestSubmitedDoneMessage (){
+		String i18Msg =I18Utilities.getInstance().getInternalitionalizeText("core.dualcontrol.list.msgOnDeleteComplete");
+		if ( i18Msg!= null && i18Msg.isEmpty())
+			return i18Msg ; 
+		return "permintaan hapus data di kirim.menunggu persetujuan"; 
+	}
 	
 
 	/**
 	 * i18n code utnuk row number
 	 **/
-	protected abstract  String  getRowNumberColumnHeaderLabelI18nKey () ; 
+	protected   String  getRowNumberColumnHeaderLabelI18nKey () {
+		return "core.dualcontrol.list.rowNumber"; 
+	}
 	
 	/**
 	 * i18n key utnuk action column label
 	 **/
-	protected abstract String  getActionColumnHeaderLabelI18nKey () ; 
+	protected  String  getActionColumnHeaderLabelI18nKey () {
+		return "core.dualcontrol.list.actionColumnHeader"; 
+	}
 	
 
 	/**

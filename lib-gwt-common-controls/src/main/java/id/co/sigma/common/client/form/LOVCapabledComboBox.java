@@ -7,12 +7,12 @@ import id.co.sigma.common.client.lov.LOVCapabledControl;
 import id.co.sigma.common.client.lov.LovPoolPanel;
 import id.co.sigma.common.client.style.CommonResourceBundle;
 import id.co.sigma.common.client.util.ClientSideLOVRelatedUtil;
+import id.co.sigma.common.client.util.I18Utilities;
 import id.co.sigma.common.data.CustomDataFormatter;
 import id.co.sigma.common.data.lov.CommonLOV;
 import id.co.sigma.common.data.lov.CommonLOVHeader;
 import id.co.sigma.common.data.lov.LOVSource;
 import id.co.sigma.common.data.lov.StrongTypedCustomLOVID;
-import id.co.sigma.common.util.I18Utilities;
 
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.dom.client.Style.Display;

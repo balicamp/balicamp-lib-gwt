@@ -9,15 +9,18 @@ import id.co.sigma.common.security.dto.UserGroupDTO;
 import id.co.sigma.common.client.form.ExtendedButton;
 import id.co.sigma.common.client.form.ExtendedCheckBox;
 import id.co.sigma.common.client.form.advance.TextBoxWithLabel;
+import id.co.sigma.common.client.jqueryui.container.JQTabContainerPanel;
+import id.co.sigma.common.client.jqueryui.grid.IReloadGridCommand;
 import id.co.sigma.common.client.security.BaseAriumSecurityComposite;
 import id.co.sigma.common.client.security.rpc.FunctionAssignmentRPCServiceAsync;
 import id.co.sigma.common.client.security.rpc.FunctionRPCServiceAsync;
 import id.co.sigma.common.client.security.rpc.GroupAssignmentRPCServiceAsync;
 import id.co.sigma.common.client.security.rpc.GroupRPCServiceAsync;
+import id.co.sigma.common.client.util.I18Utilities;
 import id.co.sigma.common.data.PagedResultHolder;
-import id.co.sigma.common.util.I18Utilities;
-import id.co.sigma.jquery.client.container.JQTabContainerPanel;
-import id.co.sigma.jquery.client.grid.IReloadGridCommand;
+
+
+
 
 
 import java.util.ArrayList;
@@ -454,9 +457,9 @@ public class GroupEditorPanel extends BaseAriumSecurityComposite implements IAdd
 			}		
 			
 			if(chkActive.getValue()){
-				data.setStatus("A");
+				data.setActiveFlag("A");
 			}else{
-				data.setStatus("N");
+				data.setActiveFlag("N");
 			}
 			
 			if(isUpdate){

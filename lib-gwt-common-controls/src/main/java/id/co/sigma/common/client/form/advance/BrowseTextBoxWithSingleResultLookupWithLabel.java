@@ -6,8 +6,8 @@ import com.google.gwt.dom.client.Element;
 import com.google.gwt.user.client.DOM;
 
 import id.co.sigma.common.client.CommonClientControlConstant;
+import id.co.sigma.common.client.control.ResourceBundleConfigurableControl;
 import id.co.sigma.common.client.form.BrowseTextBoxWithSingleResultLookup;
-import id.co.sigma.common.control.ResourceBundleConfigurableControl;
 import id.co.sigma.common.data.SingleKeyEntityData;
 
 

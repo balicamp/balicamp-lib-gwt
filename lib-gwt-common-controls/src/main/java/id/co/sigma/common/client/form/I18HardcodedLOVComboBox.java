@@ -3,7 +3,7 @@ package id.co.sigma.common.client.form;
 import id.co.sigma.common.client.control.ITransformableToReadonlyLabel;
 import id.co.sigma.common.client.util.CommonClientControlUtil;
 import id.co.sigma.common.client.util.I18HardcodedLOVParam;
-import id.co.sigma.common.util.I18Utilities;
+import id.co.sigma.common.client.util.I18Utilities;
 
 /**
  * Komponent combobox yg nilai comboBox nya di hardcode dan i18 friendly 

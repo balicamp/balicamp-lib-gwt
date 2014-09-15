@@ -4,7 +4,7 @@ package id.co.sigma.common.client.security;
 import id.co.sigma.common.security.menu.ApplicationMenuSecurity;
 import id.co.sigma.common.client.control.MainPanelStackControl;
 import id.co.sigma.common.client.control.ViewScreenMode;
-import id.co.sigma.jquery.client.menu.MenuClickHandler;
+import id.co.sigma.common.client.jqueryui.menu.MenuClickHandler;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.RunAsyncCallback;

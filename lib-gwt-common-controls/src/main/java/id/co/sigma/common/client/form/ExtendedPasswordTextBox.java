@@ -1,8 +1,8 @@
 package id.co.sigma.common.client.form;
 
 import id.co.sigma.common.client.control.ITransformableToReadonlyLabel;
-import id.co.sigma.jquery.client.container.JQDialog;
-import id.co.sigma.jquery.client.util.JQueryUtils;
+import id.co.sigma.common.client.jqueryui.container.JQDialog;
+import id.co.sigma.common.client.util.JQueryUtils;
 
 import com.google.gwt.dom.client.Element;
 import com.google.gwt.dom.client.Style.Display;

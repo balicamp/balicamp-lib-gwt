@@ -2,9 +2,9 @@ package id.co.sigma.common.client.control.i18;
 
 import id.co.sigma.common.client.control.worklist.I18ColumnDefinition;
 import id.co.sigma.common.client.control.worklist.I18EnabledSimpleGrid;
-import id.co.sigma.jquery.client.grid.cols.BaseColumnDefinition;
-import id.co.sigma.jquery.client.grid.cols.IntegerColumnDefinition;
-import id.co.sigma.jquery.client.grid.cols.StringColumnDefinition;
+import id.co.sigma.common.client.jqueryui.grid.cols.BaseColumnDefinition;
+import id.co.sigma.common.client.jqueryui.grid.cols.IntegerColumnDefinition;
+import id.co.sigma.common.client.jqueryui.grid.cols.StringColumnDefinition;
 
 /**
  * List panel dari i18 Text Editor

@@ -1,6 +1,6 @@
 package id.co.sigma.common.client.form;
 
-import id.co.sigma.common.control.ResourceBundleConfigurableControl;
+import id.co.sigma.common.client.control.ResourceBundleConfigurableControl;
 
 
 

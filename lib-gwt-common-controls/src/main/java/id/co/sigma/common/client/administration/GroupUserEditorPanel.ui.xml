@@ -1,0 +1,48 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:p1="urn:import:id.co.sigma.common.client.form.advance" 
+	xmlns:p2="urn:import:id.co.sigma.common.client.widget">
+	<ui:style>
+	
+	</ui:style>
+	<g:HTMLPanel>
+		<p2:SpanLabel ui:field="lblTitle" label="Pemeliharaan Grup"/>
+		<div style="height:5px"></div>
+		<table>
+			<tr valign="top">
+				<td  width="100px"></td>
+				<td></td>
+				<td><p1:TextBoxWithLabel 
+					ui:field="txtGroupCode" 
+					maxLength="32" 
+					visibleLength="32" 
+					placeholder="GROUP" 
+					defaultLabel="Kode Grup" 
+					i18Key="adminstration.group.list.groupCode" 
+					groupId="CORE_SYSTEM_ADMINISTRATION" 
+					mandatory="true"/></td>
+			</tr>
+			<tr valign="top">
+				<td ></td>
+				<td></td>
+				<td><p1:TextBoxWithLabel 
+					ui:field="txtGroupName" 
+					maxLength="128" 
+					placeholder="Nama Group" 
+					mandatory="true" 
+					defaultLabel="Nama Grup" 
+					groupId="CORE_SYSTEM_ADMINISTRATION" 
+					i18Key="adminstration.group.list.groupName"/></td>
+			</tr>
+		</table>
+		
+		<div class="ui-accordion ui-widget ui-helper-reset">
+	<h3 class="ui-accordion-header ui-helper-reset ui-state-default ui-accordion-header-active ui-state-active ui-corner-top ui-accordion-icons">Menu</h3>
+	<div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active">
+		
+
+</div>
+</div>
+	</g:HTMLPanel>
+</ui:UiBinder> 

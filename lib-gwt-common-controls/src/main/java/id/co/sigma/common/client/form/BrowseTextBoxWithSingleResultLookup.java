@@ -2,8 +2,8 @@ package id.co.sigma.common.client.form;
 
 import com.google.gwt.user.client.Command;
 
+import id.co.sigma.common.client.control.SingleValueLookupResultHandler;
 import id.co.sigma.common.client.control.lookup.BaseSimpleSingleResultLookupDialog;
-import id.co.sigma.common.control.SingleValueLookupResultHandler;
 
 
 

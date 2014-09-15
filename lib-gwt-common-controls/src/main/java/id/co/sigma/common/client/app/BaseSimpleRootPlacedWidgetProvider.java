@@ -4,7 +4,7 @@ package id.co.sigma.common.client.app;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 
-import id.co.sigma.common.util.NativeJsUtilities;
+import id.co.sigma.common.client.util.NativeJsUtilities;
 
 import java.util.HashMap;
 

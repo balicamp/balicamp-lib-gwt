@@ -1,0 +1,12 @@
+binding: user.agent=safari
+binding: compiler.useSourceMaps=true
+binding: locale=en
+Compiling module id.co.sigma.lab.gwt.SandboxGWT
+   Compiling 1 permutation
+      Compiling permutation 0...
+      Source Maps Enabled
+   Compile of permutations succeeded
+Linking into /Users/macbookpro/Documents/projects/common-libs/balicamp-lib-gwt/sandbox-gwt/id.co.sigma.lab.gwt.SandboxGWT/compile-1/war/sandbox_app; Writing extras to /Users/macbookpro/Documents/projects/common-libs/balicamp-lib-gwt/sandbox-gwt/id.co.sigma.lab.gwt.SandboxGWT/compile-1/extras/sandbox_app
+   Link succeeded
+   Compilation succeeded -- 8.484s
+Compile completed in 9874 ms

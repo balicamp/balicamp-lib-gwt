@@ -1,0 +1,2 @@
+Loading inherited module 'CodeServer'
+   [ERROR] Unable to find 'CodeServer.gwt.xml' on your classpath; could be a typo, or maybe you forgot to include a classpath entry for source?

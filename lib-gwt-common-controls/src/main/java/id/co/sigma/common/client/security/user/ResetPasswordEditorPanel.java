@@ -7,12 +7,12 @@ import id.co.sigma.common.security.MD5Utils;
 import id.co.sigma.common.security.domain.User;
 import id.co.sigma.common.security.exception.PasswordPolicyException;
 import id.co.sigma.common.client.form.advance.TextBoxWithLabel;
+import id.co.sigma.common.client.jqueryui.grid.IReloadGridCommand;
 import id.co.sigma.common.client.security.BaseAriumSecurityComposite;
 import id.co.sigma.common.client.security.control.EditPasswordTextBox;
 import id.co.sigma.common.client.security.group.IOpenAndCloseable;
 import id.co.sigma.common.client.security.rpc.UserRPCServiceAsync;
-import id.co.sigma.common.util.I18Utilities;
-import id.co.sigma.jquery.client.grid.IReloadGridCommand;
+import id.co.sigma.common.client.util.I18Utilities;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.dom.client.Element;

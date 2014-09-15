@@ -29,6 +29,8 @@ import id.co.sigma.common.client.rpc.DoubleSubmitProtectedAsyncCallback;
 import id.co.sigma.common.client.rpc.DualControlDataRPCServiceAsync;
 import id.co.sigma.common.client.rpc.GeneralPurposeRPCAsync;
 import id.co.sigma.common.client.rpc.CommonControlAsyncCallback;
+import id.co.sigma.common.client.util.I18Utilities;
+import id.co.sigma.common.client.util.JQueryUtils;
 import id.co.sigma.common.client.widget.BaseEditorPanel;
 import id.co.sigma.common.client.widget.EditorState;
 import id.co.sigma.common.data.DataWithToken;
@@ -40,10 +42,8 @@ import id.co.sigma.common.data.app.SimpleMasterDataDualControlApprovalResult;
 import id.co.sigma.common.exception.InvalidTokenException;
 import id.co.sigma.common.exception.SimpleJSONSerializableException;
 import id.co.sigma.common.exception.TokenNotPassedException;
-import id.co.sigma.common.util.I18Utilities;
 import id.co.sigma.common.util.ObjectGeneratorManager;
 import id.co.sigma.common.util.json.SharedServerClientLogicManager;
-import id.co.sigma.jquery.client.util.JQueryUtils;
 
 
 
@@ -227,32 +227,37 @@ public abstract class BaseDualControlDataEditor<KEY extends Serializable ,  DATA
 	/**
 	 * message standard untuk proses konfirmasi pembatalan operasi
 	 **/
-	protected abstract String getDefaultCancelButtonUserConfirmationMessage () ;
+	protected  String getDefaultCancelButtonUserConfirmationMessage () {
+		return "Apakah anda yakin untuk membatalkan?" ; 
+	}
 	
 	
 	/**
 	 * message kalau konfirmasi. message yang di tampilkan ke user apa
 	 **/
-	protected abstract String getDefaultApproveConfirmationMessage()  ; 
+	protected  String getDefaultApproveConfirmationMessage()  {
+		return "Data akan di setujui, apakah anda yakin?"; 
+	}
 	
 	
-	/**
-	 * i18 message untuk konfirmasi approval data
-	 **/
-	protected abstract String getApproveConfirmationMessageI18nKey()  ;
+	
 	
 	
 	
 	/**
 	 * key i18n key untuk konfirmasi  proses pembatalan(penekanan tombol cancel/batal) 
 	 **/
-	protected abstract String getCancelButtonUserConfirmationMessageI18nKey () ;
+	protected  String getCancelButtonUserConfirmationMessageI18nKey () {
+		return "core.dualcontrol.editor.msgFailGetDataMessage" ; 
+	}
 	
 	
 	/**
 	 * message kalau mau reject 
 	 **/
-	protected abstract String getDefaultRejectConfirmationMessage () ;
+	protected  String getDefaultRejectConfirmationMessage () {
+		return "core.dualcontrol.editor.btnReject"; 
+	}
 	
 	
 	
@@ -260,23 +265,31 @@ public abstract class BaseDualControlDataEditor<KEY extends Serializable ,  DATA
 	/**
 	 * message confirmasi reject
 	 **/
-	protected abstract String getRejectConfirmationMessageI18NKey () ;
+	protected  String getRejectConfirmationMessageI18NKey () {
+		return "core.dualcontrol.editor.msgRejectConfirmation";
+	}
 	
 	
 	
 	/**
 	 * label default untuk tomblo close
 	 **/
-	protected abstract String getDefaultCloseButtonLabel  () ; 
+	protected  String getDefaultCloseButtonLabel  () {
+		return "Tutup"; 
+	}
 	
 	/**
 	 * key internalization untuk close button. 
 	 **/
-	protected abstract String getCloseButtonLabelI18nKey () ; 
+	protected String getCloseButtonLabelI18nKey () {
+		return "core.dualcontrol.editor.btnClose"; 
+	}
 	/**
 	 * key i18 code untuk tombol save
 	 **/
-	protected abstract String getSaveButtonLabelI18nKey (); 
+	protected  String getSaveButtonLabelI18nKey (){
+		return "core.dualcontrol.editor.btnSave"; 
+	}
 	
 	/**
 	 * default Save Message
@@ -289,7 +302,9 @@ public abstract class BaseDualControlDataEditor<KEY extends Serializable ,  DATA
 	/**
 	 * i18n Code utnuk tombol batal
 	 **/
-	protected abstract String getCancelButtonLabelI18nCode ()  ; 
+	protected  String getCancelButtonLabelI18nCode ()  {
+		return "core.dualcontrol.editor.btnCancel"; 
+	}
 	/**
 	 * label default batal
 	 **/
@@ -299,34 +314,53 @@ public abstract class BaseDualControlDataEditor<KEY extends Serializable ,  DATA
 	/**
 	 * i18key back button. ini pada panel konfirmasi. 
 	 */
-	protected abstract String getBackButtonLabelI18nCode () ;
+	protected  String getBackButtonLabelI18nCode () {
+		return "core.dualcontrol.editor.btnBack"; 
+	}
 	
 	/**
 	 * default back button. ini pada panel konfirmasi
 	 */
-	protected abstract String getBackButtonDefaultLabel () ;
+	protected String getBackButtonDefaultLabel () {
+		return "Kembali"; 
+	}
 	/**
 	 * default label untuk tombol next
 	 */
-	protected abstract String getNextButtonDefaultLabel () ;
+	protected  String getNextButtonDefaultLabel () {
+		return "Selanjutnya" ; 
+	}
 	
 	
 	/**
 	 * key i18 untuk next button
 	 */
-	protected abstract String getNextButtonLabelI18nKey () ;
+	protected  String getNextButtonLabelI18nKey () {
+		return "core.dualcontrol.editor.btnNext"; 
+	}
 	
 	/**
 	 * i18n code utnuk label approve button
 	 **/
-	protected abstract String getApproveButtonLabelI18nCode () ; 
+	protected  String getApproveButtonLabelI18nCode () {
+		return "core.dualcontrol.editor.btnApprove"; 
+	}
 	
+	
+	
+	
+	/**
+	 * message konfirmasi approve data
+	 */
+	protected  String getApproveConfirmationMessageI18nCode () {
+		return "core.dualcontrol.editor.msgApproveConfirmation"; 
+	}
 	
 	/**
 	 * label default  tombol approve
 	 **/
 	protected String getDefaultApproveButtonLabel () {
-		return "Approve"; 
+		return "Setujui"; 
 	}
 
 	
@@ -334,7 +368,9 @@ public abstract class BaseDualControlDataEditor<KEY extends Serializable ,  DATA
 	/**
 	 * i18n code utnuk label reject button
 	 **/
-	protected abstract String getRejectButtonLabelI18nCode () ; 
+	protected  String getRejectButtonLabelI18nCode () {
+		return "core.dualcontrol.editor.btnReject"; 
+	}
 	
 	
 	/**
@@ -348,14 +384,16 @@ public abstract class BaseDualControlDataEditor<KEY extends Serializable ,  DATA
 	/**
 	 * i18n code utnuk label revice button
 	 **/
-	protected abstract String getReviceButtonLabelI18nCode () ; 
+	protected  String getReviceButtonLabelI18nCode () {
+		return "core.dualcontrol.list.reviceApprovalRequest";
+	}
 	
 	
 	/**
 	 * label default  tombol revice
 	 **/
 	protected String getDefaultReviceButtonLabel () {
-		return "Revice"; 
+		return "Revisi"; 
 	}
 	
 	
@@ -368,25 +406,33 @@ public abstract class BaseDualControlDataEditor<KEY extends Serializable ,  DATA
 	/**
 	 * message standard kalau gagal membaca data. anda perlu menyediakan implementasi anda masing-masing untuk message standard. message ini di override kalau misalnya i18n code untuk message ini di sediakan.pls refer pada method : {@link #getMessageFailOpenDataI18nCode()} 
 	 **/
-	protected abstract String getDefaultMessageFailOpenData(Long dataId) ; 
+	protected   String getDefaultMessageFailOpenData(Long dataId) {
+		return I18Utilities.getInstance().replacedFormattedParam(new Object[]{dataId}, "Gagal membuka data dengan ID {0}, silakan coba lagi, kalau masalah ini masih terjadi, silakan laporkan pada administrator anda"); 
+	}
 	
 	/**
-	 * i18N code untuk kasus pembacaan data gagal
+	 * i18N code untuk kasus pembacaan data gagal. {0} merupakan argument data id. silakan taruh {0} untuk menaruh id dari data dalam message
 	 **/
-	protected abstract String getMessageFailOpenDataI18nCode() ;
+	protected   String getMessageFailOpenDataI18nCode() {
+		return "core.dualcontrol.editor.msgOpenDataFailed"; 
+	}
 	
 	
 	/**
 	 * default message kalau proses save for approval gagal
 	 **/
-	protected abstract String getDefaultMessageValidateForApprovalFail() ;
+	protected   String getDefaultMessageValidateForApprovalFail() {
+		return "Gagal dalam memeriksa data"; 
+	}
 	
 	
 	
 	/**
 	 * kode i18 n code untuk kasus gagal validasi untuk proses approval
 	 **/
-	protected abstract String getValidateForApprovalFailMessageI18nCode() ;
+	protected  String getValidateForApprovalFailMessageI18nCode() {
+		return "core.dualcontrol.editor.msgValidationFailed"; 
+	}
 	
 	
 	
@@ -405,12 +451,16 @@ public abstract class BaseDualControlDataEditor<KEY extends Serializable ,  DATA
 	/**
 	 * message kalau approve sukses
 	 **/
-	protected abstract String getDefaultApproveSuccessMessage () ; 
+	protected   String getDefaultApproveSuccessMessage () {
+		return "Persetujuan Selesai"; 
+	}
 	
 	/**
 	 * key i18 kalau proses approve selesai sukses
 	 **/
-	protected abstract String getApproveSuccessMessageI18nKey () ;
+	protected  String getApproveSuccessMessageI18nKey () {
+		return "core.dualcontrol.editor.msgApproveDone"; 
+	}
 	
 	/**
 	 * use case nya : <br/>
@@ -447,7 +497,9 @@ public abstract class BaseDualControlDataEditor<KEY extends Serializable ,  DATA
 	/**
 	 * ini untuk render message kalau approval sudah selesai
 	 */
-	protected abstract String getDefaultMessageOnSaveApprovalDoneHandler(SimpleMasterDataDualControlApprovalResult approvalResult ) ;
+	protected  String getDefaultMessageOnSaveApprovalDoneHandler(SimpleMasterDataDualControlApprovalResult approvalResult ) {
+		return "Data selesai di simpan. nomor referensi data adalah :" + approvalResult.getReferenceNumber() ; 
+	}
 	
 	
 	/**
@@ -455,7 +507,9 @@ public abstract class BaseDualControlDataEditor<KEY extends Serializable ,  DATA
 	 * @param dataId id dari data yang di edit
 	 * @param exception exception yang di kirim dari server
 	 **/
-	protected abstract String getMessageOnApproveDataFailure (Long dataId , Throwable exception) ; 
+	protected  String getMessageOnApproveDataFailure (Long dataId , Throwable exception) {
+		return "Gagal dalam proses"; 
+	}
 	
 	
 	
@@ -465,7 +519,9 @@ public abstract class BaseDualControlDataEditor<KEY extends Serializable ,  DATA
 	/**
 	 * ini membaca message dalam kasus proses save for approval gagal
 	 **/
-	protected abstract String getMessageOnSaveForApprovalFailMessage (Throwable failure  ); 
+	protected  String getMessageOnSaveForApprovalFailMessage (Throwable failure  ){
+		return "Gagal menyimpan data untuk permintaan persetujuan data. Error : "  + failure.getMessage() ; 
+	}
 	
 	
 	
@@ -474,20 +530,29 @@ public abstract class BaseDualControlDataEditor<KEY extends Serializable ,  DATA
 	
 	/**
 	 * 18n code untuk notifikasi user kalau data data untuk di approve selesai disimpan
+	 * {0} : reference number
+	 * {1} : approval status
+	 * {2} : id data(Long)
 	 **/
-	protected  abstract String getsaveForApprovalDoneHandlerI18nMessage()  ; 
+	protected  String getsaveForApprovalDoneHandlerI18nMessage()  {
+		return "core.dualcontrol.editor.msgApprovalRequestDone";
+	}
 	
 	
 	
 	/**
 	 * i18n key untuklabel remark. remark di mandatory dalam kasus reject
 	 **/
-	protected abstract String getRemarkTextAreaLabelI18nKey () ; 
+	protected  String getRemarkTextAreaLabelI18nKey () {
+		return "core.dualcontrol.editor.txtApprovalRequestRemarkLabel"; 
+	}
 	
 	/**
 	 * default remark label
 	 **/
-	protected abstract String getDefaultRemarkTextAreaLabel() ;
+	protected  String getDefaultRemarkTextAreaLabel() {
+		return "Catatan Permintaan"; 
+	}
 	
 	
 	
@@ -623,7 +688,12 @@ public abstract class BaseDualControlDataEditor<KEY extends Serializable ,  DATA
 			@Override
 			public void onSuccess(SimpleMasterDataDualControlApprovalResult result) {
 				JQueryUtils.getInstance().unblockEntirePage();
-				String msg = I18Utilities.getInstance().getInternalitionalizeText(getsaveForApprovalDoneHandlerI18nMessage(), getDefaultMessageOnSaveApprovalDoneHandler(result), new Object[]{result});
+				String msg = I18Utilities.getInstance().getInternalitionalizeText(getsaveForApprovalDoneHandlerI18nMessage(), getDefaultMessageOnSaveApprovalDoneHandler(result), 
+						new Object[]{
+							result.getReferenceNumber() , 
+							result.getApprovalStatus() , 
+							result.getId()
+							});
 				Window.alert(msg); 
 				closePanelCommand.closePanel(); 
 				fireChangeHandler(editedData, DualControlEnabledOperation.INSERT.equals(dualControlEnabledOperation)? EditorOperation.ADD : EditorOperation.EDIT);
@@ -891,7 +961,7 @@ public abstract class BaseDualControlDataEditor<KEY extends Serializable ,  DATA
 	
 	protected void onApproveClick() {
 		btnApprove.setEnabled(false);
-		if (! Window.confirm(I18Utilities.getInstance().getInternalitionalizeText( getApproveButtonLabelI18nCode(), getDefaultApproveConfirmationMessage()))){
+		if (! Window.confirm(I18Utilities.getInstance().getInternalitionalizeText( getApproveConfirmationMessageI18nCode() , getDefaultApproveConfirmationMessage()))){
 			return ;
 		}
 		final DATA editedData =  getCurrentData() ;
@@ -993,7 +1063,7 @@ public abstract class BaseDualControlDataEditor<KEY extends Serializable ,  DATA
 	 * uiBinder.createAndBindUi(this)
 	 * </code>
 	 **/
-	protected abstract Widget instantiateEditorPanel () ;
+	protected  abstract Widget instantiateEditorPanel ()  ; 
 	
 	
 	

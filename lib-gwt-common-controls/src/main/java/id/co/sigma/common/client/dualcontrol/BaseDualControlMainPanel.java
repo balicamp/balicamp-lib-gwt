@@ -11,20 +11,19 @@ import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.user.client.ui.Widget;
 
 import id.co.sigma.common.client.common.ITitleAndSearchPanelFilter;
+import id.co.sigma.common.client.control.DataProcessWorker;
 import id.co.sigma.common.client.control.EditorOperation;
 import id.co.sigma.common.client.control.ExpensivePanelGenerator;
 import id.co.sigma.common.client.control.IPanelGenerator;
 import id.co.sigma.common.client.control.MainPanelStackControl;
 import id.co.sigma.common.client.control.SimpleSearchFilterHandler;
 import id.co.sigma.common.client.control.ViewScreenMode;
+import id.co.sigma.common.client.util.I18Utilities;
 import id.co.sigma.common.client.widget.BaseCommonControlComposite;
 import id.co.sigma.common.client.widget.EditorState;
-import id.co.sigma.common.control.DataProcessWorker;
 import id.co.sigma.common.data.app.DualControlEnabledData;
 import id.co.sigma.common.data.query.SimpleQueryFilter;
 import id.co.sigma.common.data.query.SimpleSortArgument;
-import id.co.sigma.common.util.I18Utilities;
-import id.co.sigma.common.util.NativeJsUtilities;
 
 /**
  *
@@ -421,7 +420,9 @@ public abstract class BaseDualControlMainPanel<PK extends Serializable, DATA ext
 	/**
 	 * kalau misalnya di perlukan, anda perlu membuat footer panel. ini akan di taruh tepat di bawah grid. kalau di perukan anda perlu mendefine grid anda di sini
 	 **/
-	protected abstract Widget instantiateFooterPanel () ; 
+	protected   Widget instantiateFooterPanel () {
+		return null ; 
+	}
 	
 	
 	
@@ -431,14 +432,18 @@ public abstract class BaseDualControlMainPanel<PK extends Serializable, DATA ext
 	/**
 	 * default label untuk icon add, ini ada di sisi bawah dari grid
 	 **/
-	protected abstract String getAddDataIconDefaultCaption () ; 
+	protected  String getAddDataIconDefaultCaption () {
+		return "tambah"; 
+	}
 	
 	
 	
 	/**
 	 * key internalization untuk 
 	 **/
-	protected abstract String getAddDataIconCaptionI18nCode () ;
+	protected  String getAddDataIconCaptionI18nCode () {
+		return "core.dualcontrol.list.msgApproveDone"; 
+	}
 	
 	
 	

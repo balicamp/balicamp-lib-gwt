@@ -5,8 +5,8 @@ package id.co.sigma.common.client.dualcontrol;
 
 
 import id.co.sigma.common.client.control.worklist.PagedSimpleGridPanel;
+import id.co.sigma.common.client.jqueryui.grid.cols.BaseColumnDefinition;
 import id.co.sigma.common.data.app.SimpleDualControlData;
-import id.co.sigma.jquery.client.grid.cols.BaseColumnDefinition;
 
 /**
  * grid multiple control untuk grid approval. ini untuk versi data yang di upload dengan spreadsheet

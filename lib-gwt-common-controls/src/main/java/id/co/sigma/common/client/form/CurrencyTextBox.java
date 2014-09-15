@@ -12,8 +12,8 @@ import id.co.sigma.common.client.control.ResourceAwareControlSelfRegisterWorker;
 import id.co.sigma.common.client.form.advance.AdvanceControlUtil;
 import id.co.sigma.common.client.util.CommonClientControlUtil;
 import id.co.sigma.common.client.util.FormatingUtils;
+import id.co.sigma.common.client.util.JQueryUtils;
 import id.co.sigma.common.client.util.OnScreenConfigurationUtils;
-import id.co.sigma.jquery.client.util.JQueryUtils;
 
 import java.io.IOException;
 import java.math.BigDecimal;

@@ -1,8 +1,8 @@
 package id.co.sigma.common.client.control.worklist;
 
+import id.co.sigma.common.client.util.NativeJsUtilities;
 import id.co.sigma.common.client.widget.BasePagingControl;
 import id.co.sigma.common.client.widget.PageChangeHandler;
-import id.co.sigma.common.util.NativeJsUtilities;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.dom.client.Element;
@@ -45,7 +45,8 @@ public class GridPagingControl extends Widget implements BasePagingControl{
 	 **/
 	private PageChangeHandler pageChangeHandler ; 
 	public GridPagingControl(){
-		setElement(DOM.createTable());
+		Element e = DOM.createTable();
+		setElement( e);
 		tbody = DOM.createElement("tbody");
 		getElement().appendChild(tbody);
 		tr = DOM.createElement("tr");
@@ -302,7 +303,8 @@ public class GridPagingControl extends Widget implements BasePagingControl{
 	 * handler kalau dalam tombol paging di tekan enter
 	 **/
 	protected void handleEnterPress(){
-		String userEntry = DOM.getElementProperty((com.google.gwt.user.client.Element) pagingText, "value");
+		
+		String userEntry = pagingText.getPropertyString("value");
 		if ( userEntry==null||userEntry.length()==0){
 			resetPagertextboxToDefault();
 			return ;
@@ -327,7 +329,7 @@ public class GridPagingControl extends Widget implements BasePagingControl{
 	}
 	
 	void resetPagertextboxToDefault(){
-		 DOM.setElementProperty((com.google.gwt.user.client.Element) pagingText, "value" , (currentPagePosition+1) + "");
+		  pagingText.setPropertyString(  "value" , (currentPagePosition+1) + "");
 	}
 
 }

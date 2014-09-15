@@ -2,7 +2,7 @@ package id.co.sigma.common.client.form;
 
 import java.util.ArrayList;
 
-import id.co.sigma.jquery.client.util.JQueryUtils;
+import id.co.sigma.common.client.util.JQueryUtils;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.dom.client.Element;

@@ -2,15 +2,15 @@ package id.co.sigma.common.client.security.applicationuser;
 
 import id.co.sigma.common.security.dto.UserDTO;
 import id.co.sigma.common.security.dto.UserGroupDTO;
+import id.co.sigma.common.client.control.DataProcessWorker;
 import id.co.sigma.common.client.control.worklist.I18ColumnDefinition;
 import id.co.sigma.common.client.control.worklist.I18EnabledSimpleGrid;
+import id.co.sigma.common.client.jqueryui.grid.CellButtonHandler;
+import id.co.sigma.common.client.jqueryui.grid.cols.BaseColumnDefinition;
+import id.co.sigma.common.client.jqueryui.grid.cols.StringColumnDefinition;
 import id.co.sigma.common.client.security.common.IOpenCloseDialog;
 import id.co.sigma.common.client.security.group.IRemove;
-import id.co.sigma.common.control.DataProcessWorker;
-import id.co.sigma.common.util.I18Utilities;
-import id.co.sigma.jquery.client.grid.CellButtonHandler;
-import id.co.sigma.jquery.client.grid.cols.BaseColumnDefinition;
-import id.co.sigma.jquery.client.grid.cols.StringColumnDefinition;
+import id.co.sigma.common.client.util.I18Utilities;
 
 import com.google.gwt.user.client.Command;
 import com.google.gwt.user.client.Timer;

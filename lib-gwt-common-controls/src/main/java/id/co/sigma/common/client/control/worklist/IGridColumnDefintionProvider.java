@@ -1,6 +1,6 @@
 package id.co.sigma.common.client.control.worklist;
 
-import id.co.sigma.jquery.client.grid.cols.BaseColumnDefinition;
+import id.co.sigma.common.client.jqueryui.grid.cols.BaseColumnDefinition;
 
 /**
  * column definition provider

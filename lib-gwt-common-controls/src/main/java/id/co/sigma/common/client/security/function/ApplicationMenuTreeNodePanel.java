@@ -8,7 +8,7 @@ import id.co.sigma.common.client.security.BaseAriumSecurityComposite;
 import id.co.sigma.common.client.security.rpc.FunctionRPCServiceAsync;
 import id.co.sigma.common.client.widget.SpanButton;
 import id.co.sigma.common.client.widget.SpanLabel;
-import id.co.sigma.jquery.client.container.JQDialog;
+import id.co.sigma.common.client.jqueryui.container.JQDialog;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;

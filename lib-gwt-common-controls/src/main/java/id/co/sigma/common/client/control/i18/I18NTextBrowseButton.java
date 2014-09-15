@@ -1,19 +1,19 @@
 package id.co.sigma.common.client.control.i18;
 
+import com.google.gwt.dom.client.Element;
 import com.google.gwt.user.client.Command;
 import com.google.gwt.user.client.DOM;
-import com.google.gwt.user.client.Element;
 
+import id.co.sigma.common.client.control.SingleValueLookupResultHandler;
 import id.co.sigma.common.client.control.lookup.BaseSimpleSingleResultLookupDialog;
 import id.co.sigma.common.client.form.BrowseTextBoxWithSingleResultLookup;
 import id.co.sigma.common.client.form.SimpleSpanImageButton;
 import id.co.sigma.common.client.form.i18.I18TextEditor;
 import id.co.sigma.common.client.style.CommonResourceBundle;
 import id.co.sigma.common.client.util.CommonClientControlUtil;
-import id.co.sigma.common.control.SingleValueLookupResultHandler;
+import id.co.sigma.common.client.util.I18Utilities;
 import id.co.sigma.common.data.entity.I18Text;
 import id.co.sigma.common.data.entity.I18TextPK;
-import id.co.sigma.common.util.I18Utilities;
 
 /**
  * 
