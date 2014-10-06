@@ -6,7 +6,6 @@
 	<classpathentry kind="var" path="M2_REPO/javax/validation/validation-api/1.0.0.GA/validation-api-1.0.0.GA.jar" sourcepath="M2_REPO/javax/validation/validation-api/1.0.0.GA/validation-api-1.0.0.GA-sources.jar"/>
 	<classpathentry kind="var" path="M2_REPO/javax/transaction/jta/1.1/jta-1.1.jar" sourcepath="M2_REPO/javax/transaction/jta/1.1/jta-1.1-sources.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="var" path="M2_REPO/id/co/sigma/commonlib/lib-base-server/1.6/lib-base-server-1.6.jar"/>
 	<classpathentry kind="var" path="M2_REPO/id/co/sigma/commonlib/lib-common/1.6/lib-common-1.6.jar"/>
 	<classpathentry kind="var" path="M2_REPO/com/google/gwt/gwt-servlet/2.6.1/gwt-servlet-2.6.1.jar" sourcepath="M2_REPO/com/google/gwt/gwt-servlet/2.6.1/gwt-servlet-2.6.1-sources.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar" sourcepath="M2_REPO/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final-sources.jar"/>
@@ -63,5 +62,6 @@
 	<classpathentry kind="lib" path="/Users/macbookpro/dev-libraries/gwt/gwt-2.6.1/gwt-elemental.jar"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/lib-gwt-common-controls"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/lib-gwt-server"/>
-	<classpathentry kind="output" path="target/classes"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/lib-base-server"/>
+	<classpathentry kind="output" path="src/main/webapp/WEB-INF/classes"/>
 </classpath>

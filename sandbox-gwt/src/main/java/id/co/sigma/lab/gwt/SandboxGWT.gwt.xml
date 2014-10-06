@@ -4,6 +4,11 @@
 	<inherits name="id.co.sigma.common.BalicampLibCommonControl" />
 	<source path="client" />
 	<entry-point class="id.co.sigma.lab.gwt.client.SandboxApp"></entry-point>
+	
 	<add-linker name="xsiframe"/>
-	<set-configuration-property name="devModeRedirectEnabled" value="true"/>
+	<set-configuration-property name="devModeRedirectEnabled" value="true"/> 
+	
+	
+	<set-property name="compiler.useSourceMaps" value="true" />
+	
 </module>

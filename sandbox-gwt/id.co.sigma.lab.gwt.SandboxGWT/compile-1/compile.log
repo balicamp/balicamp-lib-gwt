@@ -8,5 +8,5 @@ Compiling module id.co.sigma.lab.gwt.SandboxGWT
    Compile of permutations succeeded
 Linking into /Users/macbookpro/Documents/projects/common-libs/balicamp-lib-gwt/sandbox-gwt/id.co.sigma.lab.gwt.SandboxGWT/compile-1/war/sandbox_app; Writing extras to /Users/macbookpro/Documents/projects/common-libs/balicamp-lib-gwt/sandbox-gwt/id.co.sigma.lab.gwt.SandboxGWT/compile-1/extras/sandbox_app
    Link succeeded
-   Compilation succeeded -- 8.484s
-Compile completed in 9874 ms
+   Compilation succeeded -- 8.452s
+Compile completed in 9995 ms

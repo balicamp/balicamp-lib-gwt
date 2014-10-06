@@ -8,6 +8,7 @@
   			classpath*:META-INF/spring/security-server-context.xml
   			classpath*:META-INF/spring/database-context.xml
   			classpath*:META-INF/spring/core-server-component-context.xml
+  			classpath*:META-INF/META-INF/spring/gwt-core-server-component-context.xml
   		</param-value>
   	</context-param>	
 	
