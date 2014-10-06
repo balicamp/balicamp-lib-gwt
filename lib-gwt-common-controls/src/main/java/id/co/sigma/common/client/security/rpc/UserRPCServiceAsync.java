@@ -1,7 +1,6 @@
 package id.co.sigma.common.client.security.rpc;
 
 import id.co.sigma.common.security.domain.User;
-import id.co.sigma.common.security.dto.UserDTO;
 import id.co.sigma.common.security.dto.UserDetailDTO;
 import id.co.sigma.common.security.exception.PasswordPolicyException;
 import id.co.sigma.common.client.security.rpc.impl.UserRPCServiceAsyncImpl;
@@ -33,24 +32,7 @@ public interface UserRPCServiceAsync {
 		}
 	}
 	
-	/**
-	 * Get username by parameter
-	 * @param filter
-	 * @param page
-	 * @param pageSize
-	 * @param callback
-	 */
-	void getUserByParameter(SimpleQueryFilter[] filter, int page, int pageSize, AsyncCallback<PagedResultHolder<UserDTO>> callback);
 	
-	/**
-	 * Get user by parameter
-	 * @param applicationId
-	 * @param filter
-	 * @param page
-	 * @param pageSize
-	 * @param callback
-	 */
-	void getUserByParameter(Long applicationId, SimpleQueryFilter[] filter, int page, int pageSize, AsyncCallback<PagedResultHolder<UserDTO>> callback);
 	
 	/**
 	 * get user by filter

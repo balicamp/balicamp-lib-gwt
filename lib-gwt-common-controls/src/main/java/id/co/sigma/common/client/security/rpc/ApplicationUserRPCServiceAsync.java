@@ -3,7 +3,6 @@ package id.co.sigma.common.client.security.rpc;
 import id.co.sigma.common.client.security.rpc.impl.ApplicationUserRPCServiceAsyncImpl;
 import id.co.sigma.common.security.domain.ApplicationUser;
 import id.co.sigma.common.security.domain.Signon;
-import id.co.sigma.common.security.dto.UserGroupAssignmentDTO;
 import id.co.sigma.common.security.menu.ApplicationMenuSecurity;
 
 
@@ -41,15 +40,7 @@ public interface ApplicationUserRPCServiceAsync {
 	 */
 	void countApplicationUserByParameter(ApplicationUser parameter, AsyncCallback<Integer> callback);
 	
-	/**
-	 * Insert or update user group assignment
-	 * @param data
-	 * @param applicationId
-	 * @param userId
-	 * @param currentUser
-	 * @param callback
-	 */
-	void insertOrUpdate(List<UserGroupAssignmentDTO> data, Long applicationId, Long userId, String currentUser, AsyncCallback<Void> callback);
+	
 	
 	/**
 	 * Delete application user

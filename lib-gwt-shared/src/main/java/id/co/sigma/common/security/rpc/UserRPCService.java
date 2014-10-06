@@ -19,25 +19,9 @@ import id.co.sigma.common.security.exception.UserNotExistException;
  */
 public interface UserRPCService extends JSONSerializedRemoteService{
 	
-	/**
-	 * Get username by parameter
-	 * @param filter
-	 * @param page
-	 * @param pageSize
-	 * @return
-	 */
-	public PagedResultHolder<UserDTO> getUserByParameter(SimpleQueryFilter[] filter, int page, int pageSize) throws Exception;
 	
-	/**
-	 * Get user by parameter
-	 * @param applicationId
-	 * @param filter
-	 * @param page
-	 * @param pageSize
-	 * @return PageResultHolder
-	 * @throws Exception
-	 */
-	public PagedResultHolder<UserDTO> getUserByParameter(Long applicationId,SimpleQueryFilter[] filter, int page, int pageSize) throws Exception;
+	
+	
 	
 	/**
 	 * get user by filter

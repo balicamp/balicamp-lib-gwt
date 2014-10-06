@@ -4,7 +4,6 @@ import id.co.sigma.common.data.PagedResultHolder;
 import id.co.sigma.common.data.query.SimpleQueryFilter;
 import id.co.sigma.common.security.domain.Branch;
 import id.co.sigma.common.security.domain.User;
-import id.co.sigma.common.security.dto.UserDTO;
 import id.co.sigma.common.security.dto.UserDetailDTO;
 import id.co.sigma.common.security.exception.PasswordPolicyException;
 import id.co.sigma.common.security.exception.UserNotExistException;
@@ -55,15 +54,7 @@ public class UserRPCServiceImpl extends BaseSecurityRPCService<UserRPCService> i
 	}
 	
 	
-	@Override
-	public PagedResultHolder<UserDTO> getUserByParameter(SimpleQueryFilter[] filter, int page, int pageSize) throws Exception{		
-		return userService.getUserByParameter(filter, page, pageSize);
-	}
-
-	@Override
-	public PagedResultHolder<UserDTO> getUserByParameter(Long applicationId, SimpleQueryFilter[] filter,int page, int pageSize) throws Exception {	
-		return userService.getUserAtWorklistByParam(applicationId, filter, page, pageSize);
-	}
+	
 
 	@Override
 	public PagedResultHolder<User> getUserByFilter(

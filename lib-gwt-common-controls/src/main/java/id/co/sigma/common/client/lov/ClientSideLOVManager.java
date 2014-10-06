@@ -1,7 +1,7 @@
 package id.co.sigma.common.client.lov;
 
 
-import id.co.sigma.common.client.app.JSONFriendlyCommonLOVHeader;
+
 import id.co.sigma.common.client.cache.ClientObjectCacheWrapper;
 import id.co.sigma.common.client.control.ILOVCapableControl2ndLevel;
 import id.co.sigma.common.client.rpc.LOVProviderRPCServiceAsync;
@@ -287,7 +287,7 @@ public  class ClientSideLOVManager implements IClientSideLOVManager {
 			
 			LOVCacheDefinition def =  cacheManager.getCachedLOVDefinition(scn.getSource(), localeCode, scn.getId()); 
 			
-			ClientObjectCacheWrapper<JSONFriendlyCommonLOVHeader> cachedData =
+			ClientObjectCacheWrapper<CommonLOVHeader> cachedData =
 						def!=null?cacheManager.getDataFromCache(scn.getId(), localeCode, scn.getSource())  :null ;
 			if ( cachedData==null||cachedData.checkIsExpired(CACHE_LIVE_TIME)){
 				 

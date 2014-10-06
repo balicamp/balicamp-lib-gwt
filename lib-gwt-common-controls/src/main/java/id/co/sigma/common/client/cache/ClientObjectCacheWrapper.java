@@ -1,8 +1,14 @@
 package id.co.sigma.common.client.cache;
 
-import id.co.sigma.common.client.JSONFriendlyObject;
+
+import id.co.sigma.common.client.util.ClientParsedJSONContainer;
+import id.co.sigma.common.util.json.IJSONFriendlyObject;
 
 import java.util.Date;
+
+
+
+
 
 
 
@@ -16,7 +22,7 @@ import com.google.gwt.json.client.JSONValue;
  * wrapper untuk object yag di cache di lokal browser
  * @author <a href="mailto:gede.sutarsa@gmail.com">Gede Sutarsa</a>
  **/
-public class ClientObjectCacheWrapper<T extends JSONFriendlyObject<T>> {
+public class ClientObjectCacheWrapper<T extends IJSONFriendlyObject<T>> {
 
 
 	private T objectToCache ;
@@ -56,8 +62,11 @@ public class ClientObjectCacheWrapper<T extends JSONFriendlyObject<T>> {
 	public JSONValue generateJSON(){
 		JSONObject retval = new JSONObject();
 		
-		retval.put("time", new JSONNumber(cacheTime.getTime())); 
-		retval.put("data", objectToCache.translateToJSON()); 
+		retval.put("time", new JSONNumber(cacheTime.getTime()));
+		
+		ClientParsedJSONContainer actualC = new ClientParsedJSONContainer(); 
+		objectToCache.translateToJSON(actualC);
+		retval.put("data", actualC.getJsonVal()); 
 		return retval  ;
 	}
 	
@@ -88,8 +97,11 @@ public class ClientObjectCacheWrapper<T extends JSONFriendlyObject<T>> {
 		JSONObject obj  =  val.isObject();
 		long tglAsLong = (long) obj.get("time").isNumber().doubleValue();
 		Date tgl = new Date();
-		tgl.setTime(tglAsLong); 
-		objectToCache= sampleObjectForRegenerateData.instantiateFromJSON(obj.get("data")); 
+		tgl.setTime(tglAsLong);
+		
+		ClientParsedJSONContainer actualC = new ClientParsedJSONContainer(obj.get("data")); 
+		
+		objectToCache= sampleObjectForRegenerateData.instantiateFromJSON(actualC); 
 	}
 	
 }

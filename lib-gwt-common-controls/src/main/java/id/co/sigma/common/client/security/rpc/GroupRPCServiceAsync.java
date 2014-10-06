@@ -1,7 +1,6 @@
 package id.co.sigma.common.client.security.rpc;
 
 import id.co.sigma.common.security.domain.UserGroup;
-import id.co.sigma.common.security.dto.UserGroupDTO;
 import id.co.sigma.common.client.security.rpc.impl.GroupRPCServiceAsyncImpl;
 import id.co.sigma.common.data.PagedResultHolder;
 
@@ -38,14 +37,7 @@ public interface GroupRPCServiceAsync {
 	 */
 	void sampleRpc(String comment, AsyncCallback<String> callback);
 	
-	/**
-	 * Get all group
-	 * @param paramater
-	 * @param pagePosition
-	 * @param pageSize
-	 * @param callback
-	 */
-	void getAllGroup(UserGroup paramater,int pagePosition, int pageSize, AsyncCallback<PagedResultHolder<UserGroupDTO>> callback);
+	
 		
 	/**
 	 * Insert user group
@@ -68,10 +60,5 @@ public interface GroupRPCServiceAsync {
 	 */
 	void update(UserGroup parameter, AsyncCallback<Void> callback);
 	
-	/**
-	 * Get user group by parameter
-	 * @param parameter
-	 * @param callback
-	 */
-	void getUserGroupByParameter(UserGroup parameter, AsyncCallback<UserGroupDTO> callback);
+	
 }

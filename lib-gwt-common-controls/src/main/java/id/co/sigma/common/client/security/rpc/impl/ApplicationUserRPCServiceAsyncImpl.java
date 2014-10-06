@@ -6,7 +6,7 @@ import java.util.List;
 
 import com.google.gwt.user.client.rpc.AsyncCallback;
 
-import id.co.sigma.common.security.dto.UserGroupAssignmentDTO;
+
 import id.co.sigma.common.security.rpc.ApplicationUserRPCService;
 import id.co.sigma.common.client.rpc.ManualJSONSerializeRPCService;
 import id.co.sigma.common.client.security.rpc.ApplicationUserRPCServiceAsync;
@@ -19,23 +19,6 @@ public class ApplicationUserRPCServiceAsyncImpl extends ManualJSONSerializeRPCSe
 	}
 	
 	
-	@Override
-	public void insertOrUpdate(List<UserGroupAssignmentDTO> data,
-			Long applicationId, Long userId, String currentUser,
-			AsyncCallback<Void> callback) {
-		this.submitRPCRequestRaw( "getApplicationMenu", new Class<?>[]{
-				List.class , 
-				Long.class  , 
-				Long.class , 
-				String.class
-				
-			}, 
-			new Object[]{
-				 data , applicationId , userId  , currentUser  
-			}, 
-			callback);
-		
-	}
 	
 
 

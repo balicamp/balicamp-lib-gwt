@@ -1,7 +1,7 @@
 package id.co.sigma.common.client.control.i18;
 
 
-import id.co.sigma.common.client.app.JSONFriendlyAppFormConfiguration;
+
 import id.co.sigma.common.client.cache.BaseActualClientCacheWorker;
 import id.co.sigma.common.client.cache.ClientCacheDataExpiredException;
 import id.co.sigma.common.client.cache.ClientObjectCacheWrapper;
@@ -85,7 +85,7 @@ public abstract class BaseAppPanelResourceCacheManagerImpl implements
 
 	@Override
 	public void submitToCache(AppFormConfiguration formConfiguration) {
-		ClientObjectCacheWrapper<JSONFriendlyAppFormConfiguration> wrapper = new ClientObjectCacheWrapper<JSONFriendlyAppFormConfiguration>(new JSONFriendlyAppFormConfiguration(formConfiguration));
+		ClientObjectCacheWrapper<AppFormConfiguration> wrapper = new ClientObjectCacheWrapper<AppFormConfiguration>(formConfiguration);
 		wrapper.setCacheTime(new Date());
 		JSONValue jsonVal =  wrapper.generateJSON();
 		String cacheAsJson =  jsonVal.toString(); 
@@ -100,8 +100,8 @@ public abstract class BaseAppPanelResourceCacheManagerImpl implements
 		String data = getActualClientCacheWorker().get(key);
 		if ( data==null)
 			return null ; 
-		ClientObjectCacheWrapper<JSONFriendlyAppFormConfiguration> sample = new ClientObjectCacheWrapper<JSONFriendlyAppFormConfiguration>();
-		JSONFriendlyAppFormConfiguration  sampleDtl = new JSONFriendlyAppFormConfiguration();
+		ClientObjectCacheWrapper<AppFormConfiguration> sample = new ClientObjectCacheWrapper<AppFormConfiguration>();
+		AppFormConfiguration  sampleDtl = new AppFormConfiguration();
 		
 		try {
 			sample.readFromString(data, sampleDtl);
@@ -143,7 +143,7 @@ public abstract class BaseAppPanelResourceCacheManagerImpl implements
 
 	@Override
 	public String generateKey(String panelId, String localeCode) {
-		return "SIGMA-FORM-CONFIGURATION::" + panelId + "::" + localeCode;
+		return "GPS-FORM-CONFIGURATION::" + panelId + "::" + localeCode;
 	}
 	
 	

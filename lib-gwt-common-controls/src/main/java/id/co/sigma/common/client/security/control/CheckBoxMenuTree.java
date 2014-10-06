@@ -3,8 +3,10 @@
  */
 package id.co.sigma.common.client.security.control;
 
-import id.co.sigma.common.client.security.BaseAriumSecurityComposite;
+
+import id.co.sigma.common.client.widget.BaseCommonControlComposite;
 import id.co.sigma.common.security.domain.ApplicationMenu;
+
 
 
 import java.util.ArrayList;
@@ -23,7 +25,7 @@ import com.google.gwt.user.client.ui.Tree;
  * @version $Id
  * @since Jan 8, 2013, 12:08:45 PM
  */
-public class CheckBoxMenuTree extends BaseAriumSecurityComposite {
+public class CheckBoxMenuTree extends BaseCommonControlComposite {
 	
 	/**
 	 * root of tree

@@ -1,7 +1,6 @@
 package id.co.sigma.common.client.security.rpc;
 
 import id.co.sigma.common.security.domain.Branch;
-import id.co.sigma.common.security.dto.BranchDTO;
 import id.co.sigma.common.client.security.rpc.impl.BranchRPCServiceAsyncImpl;
 import id.co.sigma.common.data.PagedResultHolder;
 import id.co.sigma.common.data.query.SimpleQueryFilter;
@@ -25,14 +24,7 @@ public interface BranchRPCServiceAsync {
 		}
 	}
 	
-	/**
-	 * Get branch by parameter
-	 * @param filter
-	 * @param page
-	 * @param pageSize
-	 * @param callback
-	 */
-	void getDataByParameter(SimpleQueryFilter[] filter, int page, int pageSize, AsyncCallback<PagedResultHolder<BranchDTO>> callback);
+	
 	
 	/**
 	 * Save or update data branch

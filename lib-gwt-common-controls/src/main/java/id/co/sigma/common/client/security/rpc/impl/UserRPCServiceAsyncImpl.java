@@ -4,12 +4,10 @@ package id.co.sigma.common.client.security.rpc.impl;
 
 import com.google.gwt.user.client.rpc.AsyncCallback;
 
-import id.co.sigma.common.security.dto.UserDTO;
+
 import id.co.sigma.common.security.rpc.UserRPCService;
 import id.co.sigma.common.client.rpc.ManualJSONSerializeRPCService;
 import id.co.sigma.common.client.security.rpc.UserRPCServiceAsync;
-import id.co.sigma.common.data.PagedResultHolder;
-import id.co.sigma.common.data.query.SimpleQueryFilter;
 
 public class UserRPCServiceAsyncImpl extends ManualJSONSerializeRPCService<UserRPCService> implements UserRPCServiceAsync{
 
@@ -56,29 +54,10 @@ public class UserRPCServiceAsyncImpl extends ManualJSONSerializeRPCService<UserR
 	}
 
 
-	public void getUserByParameter(id.co.sigma.common.data.query.SimpleQueryFilter[] param0,int param1,int param2,com.google.gwt.user.client.rpc.AsyncCallback<id.co.sigma.common.data.PagedResultHolder<id.co.sigma.common.security.dto.UserDTO>> callback) {
-		this.submitRPCRequestRaw( "getUserByParameter", new Class<?>[]{
-			id.co.sigma.common.data.query.SimpleQueryFilter[].class,int.class,int.class, 
-			
-		}, 
-		new Object[]{
-			 param0, param1, param2, 
-		}, 
-		callback); 	
-	}
-
 	
 	
-	@Override
-	public void getUserByParameter(Long applicationId,
-			SimpleQueryFilter[] filter, int page, int pageSize,
-			AsyncCallback<PagedResultHolder<UserDTO>> callback) {
-		this.submitRPCRequestRaw( "getUserByParameter", new Class<?>[]{
-				
-				
-		}, new Object[]{} , callback ); 
-	}
-
+	
+	
 
 
 	public void getUserByFilter(id.co.sigma.common.data.query.SimpleQueryFilter[] param0,int param1,int param2,com.google.gwt.user.client.rpc.AsyncCallback<id.co.sigma.common.data.PagedResultHolder<id.co.sigma.common.security.domain.User>> callback) {

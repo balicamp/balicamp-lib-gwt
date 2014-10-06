@@ -6,8 +6,8 @@ import id.co.sigma.common.data.query.SimpleQueryFilter;
 import id.co.sigma.common.data.query.SimpleSortArgument;
 import id.co.sigma.common.exception.CommonWrappedSerializableException;
 import id.co.sigma.common.server.dao.IGeneralPurposeDao;
-import id.co.sigma.common.server.dao.system.ApplicationConfigurationDao;
 import id.co.sigma.common.server.data.security.SimpleUserData;
+import id.co.sigma.common.server.gwt.dao.ApplicationConfigurationDao;
 import id.co.sigma.common.server.util.IDTOGenerator;
 import id.co.sigma.common.server.util.IObjectCleanUp;
 

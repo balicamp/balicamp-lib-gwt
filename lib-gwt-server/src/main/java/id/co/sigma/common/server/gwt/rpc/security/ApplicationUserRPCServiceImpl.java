@@ -3,7 +3,6 @@ package id.co.sigma.common.server.gwt.rpc.security;
 import id.co.sigma.common.security.domain.ApplicationUser;
 import id.co.sigma.common.security.domain.Signon;
 import id.co.sigma.common.security.domain.User;
-import id.co.sigma.common.security.dto.UserGroupAssignmentDTO;
 import id.co.sigma.common.security.menu.ApplicationMenuSecurity;
 import id.co.sigma.common.security.rpc.ApplicationUserRPCService;
 import id.co.sigma.security.server.dao.IUserDao;
@@ -43,10 +42,7 @@ public class ApplicationUserRPCServiceImpl extends  BaseSecurityRPCService<Appli
 		return applicationUserService.countApplicationUserByParameter(parameter);
 	}
 
-	@Override
-	public void insertOrUpdate(List<UserGroupAssignmentDTO> data, Long applicationId, Long userId, String currentUser) throws Exception {
-		applicationUserService.insertApplicationUser(data, applicationId, userId, currentUser);		
-	}
+	
 
 	@Override
 	public void deleteApplicationUser(Long applicationId, Long userId) throws Exception {

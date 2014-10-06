@@ -24,7 +24,7 @@ import id.co.sigma.common.server.dao.util.ServerSideParsedJSONContainer;
 import id.co.sigma.common.server.gwt.rpc.IRPCHandler;
 import id.co.sigma.common.server.gwt.rpc.IRPCHandlerManager;
 import id.co.sigma.common.server.gwt.rpc.IRPCHandlerMethodInvoker;
-import id.co.sigma.common.server.service.IRPCSecurityService;
+import id.co.sigma.common.server.gwt.rpc.IRPCSecurityService;
 import id.co.sigma.common.util.json.IJSONFriendlyObject;
 import id.co.sigma.common.util.json.JSONCharacterEscapeUtil;
 import id.co.sigma.common.util.json.ParsedJSONContainer;

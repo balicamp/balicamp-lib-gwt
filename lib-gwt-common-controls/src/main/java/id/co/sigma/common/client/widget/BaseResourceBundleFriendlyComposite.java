@@ -121,32 +121,6 @@ public abstract class BaseResourceBundleFriendlyComposite extends BaseCommonCont
 	
 	
 	
-	/* (non-Javadoc)
-	 * @see id.co.sigma.common.client.widget.IMandatoryEnabledContainer#validateMandatory()
-	 */
-	//@Override
-	private void validateMandatoryOld () throws MandatoryValidationFailureException {
-		JsArrayString ids= getEntryControlIds(getElement().getId(), JSONUtilities.getInstance().generateArray(  SCANNED_TAG_FOR_MANDATORY_CHECKER));
-		if ( ids==null||ids.length()==0){
-			GWT.log("no match found");
-			return ; 
-		}
-		
-		MandatoryValidationFailureException exc = new MandatoryValidationFailureException("mandatory validation failed");
-		for(int i=0;i<ids.length();i++){
-			Element swap =  DOM.getElementById(ids.get(i));
-			Object obj = swap.getPropertyObject(CommonClientControlConstant.TAG_KEY_SEL_REF);
-			if(obj==null||!(obj instanceof MandatoryValidationEnabledControl)){
-				GWT.log("skip element id : " + ids.get(i)+", key :" +CommonClientControlConstant.TAG_KEY_SEL_REF +",null atau bukan "+  MandatoryValidationEnabledControl.class.getName());
-				continue ; 
-			}	
-			MandatoryValidationEnabledControl ctrl = (MandatoryValidationEnabledControl)obj;
-			exc.pushIfNotValid(ctrl);
-			
-		}
-		if ( !exc.getInvalidControls().isEmpty())
-			throw exc ;
-	}
 	
 	
 	@Override

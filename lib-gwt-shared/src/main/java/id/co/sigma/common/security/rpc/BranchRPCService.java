@@ -4,7 +4,7 @@ import id.co.sigma.common.data.PagedResultHolder;
 import id.co.sigma.common.data.query.SimpleQueryFilter;
 import id.co.sigma.common.rpc.JSONSerializedRemoteService;
 import id.co.sigma.common.security.domain.Branch;
-import id.co.sigma.common.security.dto.BranchDTO;
+
 
 
 
@@ -16,15 +16,6 @@ import id.co.sigma.common.security.dto.BranchDTO;
  */
 //@RemoteServiceRelativePath(value="/sigma-rpc/branch-list.app-rpc")
 public interface BranchRPCService extends JSONSerializedRemoteService{
-	
-	/**
-	 * Get branch by parameter
-	 * @param filter
-	 * @param page
-	 * @param pageSize
-	 * @return pageResultHolder
-	 */
-	public PagedResultHolder<BranchDTO> getDataByParameter(SimpleQueryFilter[] filter, int page, int pageSize) throws Exception;
 	
 	/**
 	 * Save or update data

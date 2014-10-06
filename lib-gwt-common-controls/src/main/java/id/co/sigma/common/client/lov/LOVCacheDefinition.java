@@ -4,6 +4,8 @@ package id.co.sigma.common.client.lov;
 
 import id.co.sigma.common.client.JSONFriendlyObject;
 import id.co.sigma.common.client.util.JSONUtilities;
+import id.co.sigma.common.util.json.IJSONFriendlyObject;
+import id.co.sigma.common.util.json.ParsedJSONContainer;
 
 import java.util.Date;
 
@@ -19,7 +21,7 @@ import com.google.gwt.storage.client.Storage;
  * @author <a href="mailto:gede.sutarsa@gmail.com">Gede Sutarsa</a>
  * @version $Id
  **/
-public class LOVCacheDefinition  implements JSONFriendlyObject<LOVCacheDefinition>{
+public class LOVCacheDefinition  implements IJSONFriendlyObject<LOVCacheDefinition>{
 
 	private String cacheId; 
 	
@@ -41,29 +43,11 @@ public class LOVCacheDefinition  implements JSONFriendlyObject<LOVCacheDefinitio
 	
 	
 	
-	
-	
-	
 	@Override
-	public JSONValue translateToJSON() {
-		JSONObject retval = new JSONObject();  
-		retval.put("cacheId", new JSONString(  cacheId)); 
-		retval.put("cacheTime", new JSONNumber(  cacheTime.getTime())); 
-		JSONUtilities.getInstance().put(retval, "version", version) ;
-		return retval;
-	}
-	@Override
-	public LOVCacheDefinition instantiateFromJSON(JSONValue jsonValueRef) {
-		JSONObject jsObject = jsonValueRef.isObject(); 
-		if ( jsObject==null)
-			return null ; 
-		String strCacheId = JSONUtilities.getInstance().getString(jsObject , "cacheId") ; 
-		Double tgl = JSONUtilities.getInstance().getDouble(jsObject , "cacheTime") ;
-		
-		LOVCacheDefinition retval = new LOVCacheDefinition(); 
-		retval.setCacheId(strCacheId);
-		retval.setVersion(JSONUtilities.getInstance().getString(jsObject, "version"));
-		
+	public LOVCacheDefinition instantiateFromJSON(
+			ParsedJSONContainer jsonContainer) {
+		LOVCacheDefinition retval = new LOVCacheDefinition();
+		Double tgl = jsonContainer.getAsNumber("date");
 		Date tglDateinstance =  null;
 		if (tgl!=null){
 			tglDateinstance = new Date();
@@ -71,8 +55,22 @@ public class LOVCacheDefinition  implements JSONFriendlyObject<LOVCacheDefinitio
 			tglDateinstance.setTime(tgl.longValue());
 			retval.setCacheTime(tglDateinstance);
 		}
+		retval.version = jsonContainer.getAsString("version"); 
+		retval.cacheId = jsonContainer.getAsString("cacheId"); 
 		return retval;
+		
+		
+		
 	}
+	
+	@Override
+	public void translateToJSON(ParsedJSONContainer jsonContainer) {
+		jsonContainer.put("cacheId", cacheId); 
+		jsonContainer.put("cacheTime", cacheTime.getTime());
+		jsonContainer.put("version", version);
+	}
+	
+	
 	
 	
 	

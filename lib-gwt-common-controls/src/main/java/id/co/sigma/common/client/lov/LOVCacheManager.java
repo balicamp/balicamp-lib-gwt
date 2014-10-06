@@ -1,9 +1,12 @@
 package id.co.sigma.common.client.lov;
 
-import id.co.sigma.common.client.app.JSONFriendlyCommonLOVHeader;
+
 import id.co.sigma.common.client.cache.ClientObjectCacheWrapper;
+import id.co.sigma.common.client.util.ClientParsedJSONContainer;
 import id.co.sigma.common.data.lov.CommonLOVHeader;
 import id.co.sigma.common.data.lov.LOVSource;
+import id.co.sigma.common.util.json.ParsedJSONContainer;
+import id.co.sigma.common.util.json.SharedServerClientLogicManager;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -60,8 +63,10 @@ public class LOVCacheManager {
 			int i = 0 ;
 			for ( LOVCacheDefinition scn : lovCaches){
 				JSONValue val =null ; 
+				ClientParsedJSONContainer p = new ClientParsedJSONContainer();
+				scn.translateToJSON(p);
 				try {
-					val = scn.translateToJSON(); 
+					val = p.getJsonVal();  
 				} catch (Exception e) {
 					continue ; 
 				}		
@@ -110,8 +115,9 @@ public class LOVCacheManager {
 		int size = arr.size();
 		LOVCacheDefinition def = new LOVCacheDefinition(); 
 		for ( int i=0; i<size; i++){
-			  
-			LOVCacheDefinition instance =  def.instantiateFromJSON(arr.get(i));
+			ClientParsedJSONContainer p = new ClientParsedJSONContainer(arr.get(i)); 
+			SharedServerClientLogicManager.getInstance().getJSONParser().createBlankObject() ; 
+			LOVCacheDefinition instance =  def.instantiateFromJSON(p);
 			if ( instance==null)
 				continue ; 
 			lovCaches.add(instance);
@@ -153,7 +159,7 @@ public class LOVCacheManager {
 				indexedData.put(key, def); 
 				this.lovCaches.add(def);
 			}
-			ClientObjectCacheWrapper<JSONFriendlyCommonLOVHeader> dataForCache = new ClientObjectCacheWrapper<JSONFriendlyCommonLOVHeader>(new JSONFriendlyCommonLOVHeader(lovData)); 
+			ClientObjectCacheWrapper<CommonLOVHeader> dataForCache = new ClientObjectCacheWrapper<CommonLOVHeader>(lovData); 
 			
 			Storage storage =Storage.getLocalStorageIfSupported(); 
 			storage.setItem(key, dataForCache.generateJSON().toString());
@@ -168,7 +174,7 @@ public class LOVCacheManager {
 	 * @param  localizationCode kode localization
 	 * @param source source data
 	 **/
-	public ClientObjectCacheWrapper<JSONFriendlyCommonLOVHeader> getDataFromCache (String id,String localizationCode  ,  LOVSource source ){
+	public ClientObjectCacheWrapper<CommonLOVHeader> getDataFromCache (String id,String localizationCode  ,  LOVSource source ){
 		if ( !supportHTML5Storage)
 			return null  ; 
 		String key= generateCacheId(id, localizationCode, source);
@@ -176,8 +182,8 @@ public class LOVCacheManager {
 		String rawData =   ( storage.getItem(key));
 		if ( rawData==null)
 			return null; 
-		ClientObjectCacheWrapper<JSONFriendlyCommonLOVHeader> sample = new ClientObjectCacheWrapper<JSONFriendlyCommonLOVHeader>();
-		sample.readFromString(rawData, new JSONFriendlyCommonLOVHeader()); 
+		ClientObjectCacheWrapper<CommonLOVHeader> sample = new ClientObjectCacheWrapper<CommonLOVHeader>();
+		sample.readFromString(rawData, new CommonLOVHeader()); 
  		return sample ; 
 	}
 	

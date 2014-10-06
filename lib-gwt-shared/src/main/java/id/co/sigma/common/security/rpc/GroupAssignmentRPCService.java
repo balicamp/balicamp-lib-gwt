@@ -16,15 +16,7 @@ import java.util.List;
  */
 public interface GroupAssignmentRPCService extends JSONSerializedRemoteService{
 	
-	/**
-	 * Get all group
-	 * @param parameter
-	 * @param pagePosition
-	 * @param pageSize
-	 * @return
-	 * @throws Exception
-	 */
-	public PagedResultHolder<UserGroupAssignmentDTO> getAllGroup(UserGroupAssignment parameter,int pagePosition, int pageSize) throws Exception;
+	
 	
 	/**
 	 * Insert data
@@ -40,11 +32,4 @@ public interface GroupAssignmentRPCService extends JSONSerializedRemoteService{
 	 */
 	public void delete(Long data) throws Exception;
 	
-	/**
-	 * Get user group by user id
-	 * @param userId
-	 * @return
-	 * @throws Exception
-	 */
-	public List<UserGroupAssignmentDTO> getUserGroupByUserId(Long userId) throws Exception;
 }

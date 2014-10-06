@@ -4,7 +4,6 @@
 package id.co.sigma.common.client.security.rpc;
 
 import id.co.sigma.common.security.domain.Application;
-import id.co.sigma.common.security.dto.ApplicationDTO;
 import id.co.sigma.common.client.security.rpc.impl.ApplicationRPCServiceAsyncImpl;
 import id.co.sigma.common.data.PagedResultHolder;
 
@@ -26,7 +25,6 @@ public interface ApplicationRPCServiceAsync {
 		public static ApplicationRPCServiceAsync getInstance() {
 			if (instance==null){
 				instance = GWT.create(ApplicationRPCServiceAsyncImpl.class);
-//				CommonGlobalVariableHolder.getInstance().fixTargetUrl((ServiceDefTarget)instance);
 			}			 
 			return instance;
 		}
@@ -40,29 +38,5 @@ public interface ApplicationRPCServiceAsync {
 	public void getApplicationList(AsyncCallback<List<Application>> callback) throws Exception;
 	
 	
-	/**
-	 * current app, data detail nya spt bagaimana : 
-	 * <ol>
-	 * <li>Id applikasi</li>
-	 * <li>tanggal aplikasi</li>
-	 * 
-	 * </ol>
-	 **/
-	public void getCurrentAppApplicationInfo  (AsyncCallback<ApplicationDTO> callback) ; 
 	
-	/**
-	 * Get all application
-	 * @author I Gede Mahendra
-	 * @param pagePosition
-	 * @param pageSize
-	 * @param callback
-	 */
-	void getApplicationList(int pagePosition, int pageSize, AsyncCallback<PagedResultHolder<ApplicationDTO>> callback);
-	
-	/**
-	 * Save or update
-	 * @param data
-	 * @param callback
-	 */
-	void saveOrUpdate(ApplicationDTO data, AsyncCallback<Void> callback);
 }

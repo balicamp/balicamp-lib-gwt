@@ -161,6 +161,7 @@ public abstract class BaseEditorPanel<DATA> extends BaseResourceBundleFriendlyCo
 			@Override
 			public void execute() {
 				renderDataToControl(data, editorState);
+				
 			}
 		};
 		if (!lovLoadComplete ){
@@ -183,12 +184,14 @@ public abstract class BaseEditorPanel<DATA> extends BaseResourceBundleFriendlyCo
 		this.currentData = data ;
 		
 		renderDataToControl(data, editorState);
+		
 	}
 	@Override
 	public void viewDataAsReadOnly(DATA data) {
 		this.currentData = data ;
 		this.editorState = EditorState.viewReadonly;
 		renderDataToControl(data, editorState);
+		
 	}
 	
 	/**
@@ -251,4 +254,7 @@ public abstract class BaseEditorPanel<DATA> extends BaseResourceBundleFriendlyCo
 	public DataEditRequestCallback<DATA> getAfterEditOrViewCallback() {
 		return afterEditOrViewCallback;
 	}
+	
+	
+	
 }

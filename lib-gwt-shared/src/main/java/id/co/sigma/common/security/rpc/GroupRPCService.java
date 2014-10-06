@@ -22,15 +22,6 @@ public interface GroupRPCService extends JSONSerializedRemoteService{
 	 */
 	public String sampleRpc(String comment);
 	
-	/**
-	 * Get all group
-	 * @param parameter
-	 * @param pagePosition
-	 * @param pageSize
-	 * @return PagedSimpleDataGridData
-	 * @throws Exception
-	 */
-	public PagedResultHolder<UserGroupDTO> getAllGroup(UserGroup parameter,int pagePosition, int pageSize) throws Exception;
 	
 	/**
 	 * Insert user group	
@@ -53,11 +44,5 @@ public interface GroupRPCService extends JSONSerializedRemoteService{
 	 */
 	public void update(UserGroup parameter) throws Exception;
 	
-	/**
-	 * Get user group by parameter
-	 * @param parameter
-	 * @return UserGroup
-	 * @throws Exception
-	 */
-	public UserGroupDTO getUserGroupByParameter(UserGroup parameter) throws Exception;
+	
 }

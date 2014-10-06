@@ -9,7 +9,7 @@ import id.co.sigma.common.data.query.SimpleQueryFilter;
 import id.co.sigma.common.data.query.SimpleSortArgument;
 import id.co.sigma.common.rpc.common.GeneralPurposeRPC;
 import id.co.sigma.common.server.gwt.rpc.BaseServerRPCService;
-import id.co.sigma.common.server.service.IRPCSecurityService;
+import id.co.sigma.common.server.gwt.rpc.IRPCSecurityService;
 import id.co.sigma.common.util.json.IJSONFriendlyObject;
 
 /**

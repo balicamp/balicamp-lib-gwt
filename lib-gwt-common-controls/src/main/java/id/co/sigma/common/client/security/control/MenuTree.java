@@ -3,9 +3,11 @@
  */
 package id.co.sigma.common.client.security.control;
 
-import id.co.sigma.common.client.security.BaseAriumSecurityComposite;
+
 import id.co.sigma.common.client.util.I18Utilities;
+import id.co.sigma.common.client.widget.BaseCommonControlComposite;
 import id.co.sigma.common.security.domain.ApplicationMenu;
+
 
 
 
@@ -27,7 +29,7 @@ import com.google.gwt.user.client.ui.TreeItem;
  * @version $Id
  * @since Jan 4, 2013, 5:26:48 PM
  */
-public class MenuTree extends BaseAriumSecurityComposite {
+public class MenuTree extends BaseCommonControlComposite {
 	
 	
 	
